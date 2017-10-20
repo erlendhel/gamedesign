@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour {
+public class CameraController : MonoBehaviour
+{
 
     public GameObject player;
 
@@ -13,17 +14,21 @@ public class CameraController : MonoBehaviour {
     private bool mouseButtonHeldDown = false;
     private Vector3 mousePosOnClick;
     private Vector3 lastMousePos;
-    public float speed = 0.025f;
+    public float turnSpeed = 4.0f;
 
-	// Use this for initialization
-	void Start ()
+    public float timer = 0;
+
+    // Use this for initialization
+    void Start()
     {
-        offset = transform.position - player.transform.position;
-	}
+        //offset = transform.position - player.transform.position;
+        offset = new Vector3(player.transform.position.x, player.transform.position.y + 8.0f, player.transform.position.z + 7.0f);
+    }
 
 
     private void Update()
     {
+        timer += Time.deltaTime * 3.5f;
         if (Input.GetMouseButtonDown(0))
         {
             mouseButtonHeldDown = true;
@@ -39,18 +44,30 @@ public class CameraController : MonoBehaviour {
     // Update is called once per frame
     void LateUpdate()
     {
+        offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
         transform.position = player.transform.position + offset;
-
-        if (mouseButtonHeldDown)
+        transform.LookAt(player.transform.position);
+        /*if (mouseButtonHeldDown)
         {
-            Vector3 currentMousePos = Input.mousePosition;
-            if (lastMousePos != currentMousePos)
-            {
-                Vector3 diff = lastMousePos - currentMousePos;
-                transform.Rotate(diff.y * speed, diff.x * speed, 0, Space.World);
-            }
-            lastMousePos = currentMousePos;
+            Rotate();
+        }*/
+
+    }
+
+    void Rotate()
+    {
+        Vector3 currentMousePos = Input.mousePosition;
+        if (lastMousePos != currentMousePos)
+        {
+            Vector3 diff = lastMousePos - currentMousePos;
+            float x = -Mathf.Cos(timer) * 10f;
+            float z = Mathf.Sin(timer) * 10f;
+            Vector3 pos = new Vector3(x, 5f, z);
+            transform.position = pos + player.transform.position;
+            transform.LookAt(player.transform);
+            //transform.Rotate(diff.y * turnSpeed, -diff.x * turnSpeed, 0, Space.World);
         }
-        
+        lastMousePos = currentMousePos;
+
     }
 }
