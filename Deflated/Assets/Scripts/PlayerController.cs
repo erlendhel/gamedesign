@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public float speed = 10;
+    public float speed = 15f;
     public float jumpSpeed = 200.0f;
     private bool isGrounded = true;
     private bool inWater = false;
@@ -34,6 +34,12 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
 
+        //Make player follow the direction of the camera
+        movement = Camera.main.transform.TransformDirection(movement);
+        movement.y = 0.0f;
+
+        movement = Vector3.Normalize(movement);
+        
         if (inWater == false)
         {
             rb.AddForce(movement * speed);
