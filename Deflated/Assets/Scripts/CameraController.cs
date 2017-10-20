@@ -10,30 +10,25 @@ public class CameraController : MonoBehaviour
     /* Offset between player and camera */
     private Vector3 offset;
 
-    /*Draggin camera by clicking and dragging mouse*/
+    /*Rotating camera by clicking and dragging mouse*/
     private bool mouseButtonHeldDown = false;
-    private Vector3 mousePosOnClick;
-    private Vector3 lastMousePos;
     public float turnSpeed = 4.0f;
 
-    public float timer = 0;
+    
 
     // Use this for initialization
     void Start()
     {
-        //offset = transform.position - player.transform.position;
-        offset = new Vector3(player.transform.position.x, player.transform.position.y + 6.0f, player.transform.position.z + 7.0f);
+        offset = new Vector3(player.transform.position.x, player.transform.position.y + 2f, player.transform.position.z + 7.0f);
     }
 
 
     private void Update()
     {
-        timer += Time.deltaTime * 3.5f;
+        
         if (Input.GetMouseButtonDown(0))
         {
             mouseButtonHeldDown = true;
-            mousePosOnClick = Input.mousePosition;
-            lastMousePos = mousePosOnClick;
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -50,27 +45,7 @@ public class CameraController : MonoBehaviour
         }
         transform.position = player.transform.position + offset;
         transform.LookAt(player.transform.position);
-        /*if (mouseButtonHeldDown)
-        {
-            Rotate();
-        }*/
 
     }
 
-    void Rotate()
-    {
-        Vector3 currentMousePos = Input.mousePosition;
-        if (lastMousePos != currentMousePos)
-        {
-            Vector3 diff = lastMousePos - currentMousePos;
-            float x = -Mathf.Cos(timer) * 10f;
-            float z = Mathf.Sin(timer) * 10f;
-            Vector3 pos = new Vector3(x, 5f, z);
-            transform.position = pos + player.transform.position;
-            transform.LookAt(player.transform);
-            //transform.Rotate(diff.y * turnSpeed, -diff.x * turnSpeed, 0, Space.World);
-        }
-        lastMousePos = currentMousePos;
-
-    }
 }
