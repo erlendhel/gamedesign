@@ -34,17 +34,12 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
 
-<<<<<<< HEAD
-        movement = Camera.main.transform.TransformDirection(movement);
-
-=======
         //Make player follow the direction of the camera
         movement = Camera.main.transform.TransformDirection(movement);
         movement.y = 0.0f;
 
         movement = Vector3.Normalize(movement);
         
->>>>>>> 2d7a641f31efd56ca25820c4795d694030c31922
         if (inWater == false)
         {
             rb.AddForce(movement * speed);
