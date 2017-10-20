@@ -109,33 +109,21 @@
     <Reference Include="UnityEditor.Graphs">
       <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.Android.Extensions">
-      <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Deflated.csproj">
-      <Project>{4F2C518B-D046-A172-928F-39482DDA28C8}</Project>
-      <Name>Deflated</Name>
-    </ProjectReference>
     <ProjectReference Include="Deflated.Plugins.csproj">
       <Project>{00DE2F95-2F4A-F6B0-1FF0-038CC667D581}</Project>
       <Name>Deflated.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="Deflated.csproj">
+      <Project>{4F2C518B-D046-A172-928F-39482DDA28C8}</Project>
+      <Name>Deflated</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
