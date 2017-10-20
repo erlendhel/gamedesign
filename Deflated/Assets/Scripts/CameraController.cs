@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         //offset = transform.position - player.transform.position;
-        offset = new Vector3(player.transform.position.x, player.transform.position.y + 8.0f, player.transform.position.z + 7.0f);
+        offset = new Vector3(player.transform.position.x, player.transform.position.y + 6.0f, player.transform.position.z + 7.0f);
     }
 
 
@@ -44,7 +44,10 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
+        if (mouseButtonHeldDown)
+        {
+            offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
+        }
         transform.position = player.transform.position + offset;
         transform.LookAt(player.transform.position);
         /*if (mouseButtonHeldDown)
