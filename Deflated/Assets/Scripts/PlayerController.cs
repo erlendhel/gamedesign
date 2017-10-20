@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
 
+        movement = Camera.main.transform.TransformDirection(movement);
+
         if (inWater == false)
         {
             rb.AddForce(movement * speed);
@@ -81,6 +83,16 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.name == "Water")
         {
             inWater = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Minimizer"))
+        {
+            other.gameObject.SetActive(false);
+            transform.localScale += new Vector3(-0.5f, -0.5f, -0.5f);
+            rb.mass = (rb.mass / 2);
         }
     }
 }
