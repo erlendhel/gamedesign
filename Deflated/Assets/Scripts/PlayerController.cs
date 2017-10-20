@@ -7,9 +7,15 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 15f;
     public float jumpSpeed = 200.0f;
+    public float pickupConstant = 2.0f;
     private bool isGrounded = true;
     private bool inWater = false;
     private Rigidbody rb;
+
+    // These values need to coincide with the scale of the character set in Unity
+    private float x_size = 1.0f;
+    private float y_size = 1.0f;
+    private float z_size = 1.0f;
 
     private void Start()
     {
@@ -90,13 +96,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Function to detect if the game character goes over a pickup.
     private void OnTriggerEnter(Collider other)
     {
+        // Checking if the player collides with a minimizer pickup
         if (other.gameObject.CompareTag("Minimizer"))
         {
+            // If a player picks up the minimizer, the minimizer object is set to inactive
             other.gameObject.SetActive(false);
-            transform.localScale += new Vector3(-0.5f, -0.5f, -0.5f);
+            
+            // Transform the scale in terms of the ORIGINAL size of the character
+            transform.localScale = new Vector3(x_size / 2, y_size / 2, z_size / 2);
+            // Divide the mass by 2
             rb.mass = (rb.mass / 2);
+        }
+        if (other.gameObject.CompareTag("Maximizer"))
+        {
+            // If a player picks up the minimizer, the minimizer object is set to inactive
+            other.gameObject.SetActive(false);
+            // Transform the scale in terms of the ORIGINAL size of the character
+            transform.localScale = new Vector3(x_size * 2, y_size * 2, z_size * 2);
+            // Divide the mass by 2
+            rb.mass = (rb.mass * 2);
         }
     }
 }
