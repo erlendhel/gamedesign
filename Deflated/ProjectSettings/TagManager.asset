@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Minimizer
+  - Maximizer
+  - DecreaseGravity
   layers:
   - Default
   - TransparentFX
