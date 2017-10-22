@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Minimizer
   - Maximizer
-  - DecreaseGravity
+  - DecreaseGrav
+  - IncreaseGrav
   layers:
   - Default
   - TransparentFX

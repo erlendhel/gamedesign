@@ -15,26 +15,37 @@ public class PlayerController : MonoBehaviour {
     private float z_size = 1.0f;
     private float mass = 1.0f;
 
+    private Vector3 initGrav = new Vector3(0, -9.81f, 0);
+    private Vector3 decreaseGrav = new Vector3(0, -4.5f, 0);
+    private Vector3 increaseGrav = new Vector3(0, -20.0f, 0);
+
     // Variables used to determine states of pickups
     public bool hasMinimizer = false;
     public bool hasMaximizer = false;
+    public bool hasIncreaseGrav = false;
+    public bool hasDecreaseGrav = false;
     private bool minimizerActive = false;
     private bool maximizerActive = false;
+    private bool increaseGravActive = false;
+    private bool decreaseGravActive = false;
     private int pickupDuration = 5;
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
+        Physics.gravity = initGrav;
     }
 
     private void Update() {
         if (Input.GetKeyDown("space") && isGrounded == true && inWater == false) {
             Jump();
-        }
-        if (Input.GetKeyDown("1") && hasMinimizer == true) {
-            activateMinimizer();
-        }
-        if (Input.GetKeyDown("2") && hasMaximizer == true) {
-            activateMaximizer();
+        } else if (Input.GetKeyDown("1") && hasMinimizer == true) {
+            ActivateMinimizer();
+        } else if (Input.GetKeyDown("2") && hasMaximizer == true) {
+            ActivateMaximizer();
+        } else if (Input.GetKeyDown("3") && hasIncreaseGrav == true) {
+            ActivateIncreaseGrav();
+        } else if (Input.GetKeyDown("4") && hasDecreaseGrav == true) {
+            ActivateDecreaseGrav();
         }
     }
 
@@ -93,19 +104,21 @@ public class PlayerController : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         // Checking if the player collides with a minimizer pickup
         if (other.gameObject.CompareTag("Minimizer")) {
-            other.gameObject.SetActive(false);  // Set minimizer object to inactive
             hasMinimizer = true; // Player has acquired a minimizer pickup
         } else if (other.gameObject.CompareTag("Maximizer")) {
-            other.gameObject.SetActive(false); // Set maximizer object to inactive
             hasMaximizer = true; // Player has acquired a maximizer pickup
+        } else if (other.gameObject.CompareTag("IncreaseGrav")) {
+            hasIncreaseGrav = true;
+        } else if (other.gameObject.CompareTag("DecreaseGrav")) {
+            hasDecreaseGrav = true;
         }
     }
 
     // Function that activates the minimizer-pickup
-    private void activateMinimizer() {
+    private void ActivateMinimizer() {
         // Check if a maximizer-pickup is activated, if it has, stop the current coroutine
         if (maximizerActive == true) {
-            StopCoroutine("maxminTimer");
+            StopCoroutine("MaxMinTimer");
         }
         // Apply the buff from the minimizer
         transform.localScale = new Vector3(x_size / 2, y_size / 2, z_size / 2);
@@ -115,14 +128,14 @@ public class PlayerController : MonoBehaviour {
         // Set the minimizer to active
         minimizerActive = true;
         // Start coroutine to time and cancel the pickup
-        StartCoroutine("maxminTimer");
+        StartCoroutine("MaxMinTimer");
     }
 
     // Function that activates the maximizer-pickup
-    private void activateMaximizer() {
+    private void ActivateMaximizer() {
         // Check if a minimizer-pickup is activated, if it has, stop the current coroutine
         if (minimizerActive == true) {
-            StopCoroutine("maxminTimer");
+            StopCoroutine("MaxMinTimer");
         }
         // Apply the buff from the maximizer
         transform.localScale = new Vector3(x_size * 2, y_size * 2, z_size * 2);
@@ -132,11 +145,34 @@ public class PlayerController : MonoBehaviour {
         // Set the maximizer to active
         maximizerActive = true;
         // Start coroutine to time and cancel the pickup
-        StartCoroutine("maxminTimer");
+        StartCoroutine("MaxMinTimer");
 
     }
 
-    IEnumerator maxminTimer() {
+    // Function that activates the increase-gravity-pickup
+    private void ActivateIncreaseGrav() {
+        // If decreaseGravity is active, stop the coroutine controlling gravity pickups
+        if (decreaseGravActive == true) {
+            StopCoroutine("GravTimer");
+        }
+
+        Physics.gravity = increaseGrav;
+
+        hasIncreaseGrav = false;
+        increaseGravActive = true;
+    }
+
+    private void ActivateDecreaseGrav() {
+        if (increaseGravActive == true) {
+            StopCoroutine("GravTimer");
+        }
+        Physics.gravity = decreaseGrav;
+
+        hasDecreaseGrav = false;
+        decreaseGravActive = true;
+    }
+
+    IEnumerator MaxMinTimer() {
         // Change the variable pickupDuration in order to change duration
         yield return new WaitForSeconds(pickupDuration);
         // Return to normal scale and mass
@@ -144,7 +180,8 @@ public class PlayerController : MonoBehaviour {
         rb.mass = mass;
     }
 
-    IEnumerator gravTimer() {
+    IEnumerator GravTimer() {
         yield return new WaitForSeconds(pickupDuration);
+        Physics.gravity = initGrav;
     }
 }
