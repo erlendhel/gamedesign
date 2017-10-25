@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour {
     private bool inWater = false;
     private Rigidbody rb;
 
+
+
     // Default values of game character, NOT directly linked with the ones in Unity.
     private float x_size = 1.0f;
     private float y_size = 1.0f;
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour {
     private Vector3 decreaseGrav = new Vector3(0, -4.5f, 0);
     private Vector3 increaseGrav = new Vector3(0, -20.0f, 0);
 
+    
     // Variables used to determine states of pickups
     public bool hasMinimizer = false;
     public bool hasMaximizer = false;
@@ -29,6 +32,10 @@ public class PlayerController : MonoBehaviour {
     private bool increaseGravActive = false;
     private bool decreaseGravActive = false;
     private int pickupDuration = 5;
+    public bool hasIjump = false;
+    private bool ijumpActive = false;
+    public bool hasTbjump = false;
+    private bool tbjumpActive = false;
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
@@ -46,6 +53,10 @@ public class PlayerController : MonoBehaviour {
             ActivateIncreaseGrav();
         } else if (Input.GetKeyDown("4") && hasDecreaseGrav == true) {
             ActivateDecreaseGrav();
+        } else if (Input.GetKeyDown("5") && hasIjump == true){
+            ActivateIjump();
+        } else if (Input.GetKeyDown("6") && hasTbjump == true){
+            ActivateTbjump();
         }
     }
 
@@ -111,6 +122,10 @@ public class PlayerController : MonoBehaviour {
             hasIncreaseGrav = true;
         } else if (other.gameObject.CompareTag("DecreaseGrav")) {
             hasDecreaseGrav = true;
+        } else if (other.gameObject.CompareTag("Ijump")) {
+            hasIjump = true;
+        } else if (other.gameObject.CompareTag("Tbjump")){
+            hasTbjump = true;
         }
     }
 
@@ -172,6 +187,29 @@ public class PlayerController : MonoBehaviour {
         decreaseGravActive = true;
     }
 
+    //acivates Ijump-pickup
+    private void ActivateIjump() {
+        if (isGrounded == true && inWater == false) {
+
+            rb.AddForce(Vector3.up * jumpSpeed * 3);
+
+            hasIjump = false;
+        }
+
+        else{
+            rb.AddForce(Vector3.up * jumpSpeed);
+        }
+    }
+
+    private void ActivateTbjump() {
+        
+        jumpSpeed = jumpSpeed * 2;
+      
+
+        hasTbjump = false;
+        StartCoroutine("TbjumpTimer");
+    }
+
     IEnumerator MaxMinTimer() {
         // Change the variable pickupDuration in order to change duration
         yield return new WaitForSeconds(pickupDuration);
@@ -183,5 +221,10 @@ public class PlayerController : MonoBehaviour {
     IEnumerator GravTimer() {
         yield return new WaitForSeconds(pickupDuration);
         Physics.gravity = initGrav;
+    }
+
+    IEnumerator TbjumpTimer(){
+        yield return new WaitForSeconds(pickupDuration);
+        jumpSpeed =  jumpSpeed / 2 ;
     }
 }
