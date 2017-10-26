@@ -8,6 +8,8 @@ TagManager:
   - Maximizer
   - DecreaseGrav
   - IncreaseGrav
+  - SpeedInstant
+  - SpeedTime
   layers:
   - Default
   - TransparentFX

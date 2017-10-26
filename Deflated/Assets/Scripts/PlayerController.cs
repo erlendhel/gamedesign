@@ -24,11 +24,19 @@ public class PlayerController : MonoBehaviour {
     public bool hasMaximizer = false;
     public bool hasIncreaseGrav = false;
     public bool hasDecreaseGrav = false;
+    public bool hasInstantSpeed = false;
+    public bool hasTimeSpeed = false;
+
+    //To determine if a pickup is currently in use by the player
     private bool minimizerActive = false;
     private bool maximizerActive = false;
     private bool increaseGravActive = false;
     private bool decreaseGravActive = false;
+    private bool timeSpeedActive = false;
     private int pickupDuration = 5;
+
+    //The power of the instant speed pickup
+    private float instantSpeedPower = 5000f;
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
@@ -46,6 +54,10 @@ public class PlayerController : MonoBehaviour {
             ActivateIncreaseGrav();
         } else if (Input.GetKeyDown("4") && hasDecreaseGrav == true) {
             ActivateDecreaseGrav();
+        }else if(Input.GetKeyDown("5") && hasInstantSpeed == true) {
+            ActicateInstantSpeed();
+        }else if (Input.GetKeyDown("6") && hasTimeSpeed == true){
+            ActicateTimeSpeed();
         }
     }
 
@@ -63,6 +75,7 @@ public class PlayerController : MonoBehaviour {
         
         if (inWater == false) {
             rb.AddForce(movement * speed);
+            Debug.Log(speed);
         } else {
             rb.AddForce(movement * (speed / 3));
         }
@@ -111,6 +124,10 @@ public class PlayerController : MonoBehaviour {
             hasIncreaseGrav = true;
         } else if (other.gameObject.CompareTag("DecreaseGrav")) {
             hasDecreaseGrav = true;
+        }else if (other.gameObject.CompareTag("SpeedInstant")){
+            hasInstantSpeed = true;
+        }else if (other.gameObject.CompareTag("SpeedTime")){
+            hasTimeSpeed = true;
         }
     }
 
@@ -160,6 +177,8 @@ public class PlayerController : MonoBehaviour {
 
         hasIncreaseGrav = false;
         increaseGravActive = true;
+
+        StartCoroutine("GravTimer");
     }
 
     private void ActivateDecreaseGrav() {
@@ -170,6 +189,27 @@ public class PlayerController : MonoBehaviour {
 
         hasDecreaseGrav = false;
         decreaseGravActive = true;
+        StartCoroutine("GravTimer");
+    }
+
+    private void ActicateInstantSpeed() { 
+        //Set the movement to where the camera z-axis is pointing
+        Vector3 movement = new Vector3(0,0,1);
+        movement = Camera.main.transform.TransformDirection(movement);
+        
+        rb.AddForce(movement * instantSpeedPower);
+        hasInstantSpeed = false;
+    }
+
+    private void ActicateTimeSpeed() {
+        if (timeSpeedActive == true) {
+            StopCoroutine("SpeedTimer");
+        }
+        speed *= 2;
+
+        hasTimeSpeed = false;
+        timeSpeedActive = true;
+        StartCoroutine("SpeedTimer");
     }
 
     IEnumerator MaxMinTimer() {
@@ -183,5 +223,10 @@ public class PlayerController : MonoBehaviour {
     IEnumerator GravTimer() {
         yield return new WaitForSeconds(pickupDuration);
         Physics.gravity = initGrav;
+    }
+
+    IEnumerator SpeedTimer(){
+        yield return new WaitForSeconds(pickupDuration);
+        speed = 15f;
     }
 }
