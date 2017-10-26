@@ -10,9 +10,9 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody rb;
 
     // Default values of game character, NOT directly linked with the ones in Unity.
-    private float x_size = 1.0f;
-    private float y_size = 1.0f;
-    private float z_size = 1.0f;
+    private float x_size = 50.0f;
+    private float y_size = 50.0f;
+    private float z_size = 50.0f;
     private float mass = 1.0f;
 
     private Vector3 initGrav = new Vector3(0, -9.81f, 0);
