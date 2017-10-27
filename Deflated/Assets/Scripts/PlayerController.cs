@@ -86,7 +86,6 @@ public class PlayerController : MonoBehaviour {
         
         if (inWater == false) {
             rb.AddForce(movement * speed);
-            Debug.Log(speed);
         } else {
             rb.AddForce(movement * (speed / 3));
         }
