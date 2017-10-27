@@ -11,7 +11,7 @@ TagManager:
   - Ijump
   - SpeedInstant
   - SpeedTime
-
+  - Tbjump
   layers:
   - Default
   - TransparentFX
