@@ -12,9 +12,9 @@ public class PlayerController : MonoBehaviour {
 
 
     // Default values of game character, NOT directly linked with the ones in Unity.
-    private float x_size = 1.0f;
-    private float y_size = 1.0f;
-    private float z_size = 1.0f;
+    private float x_size = 50.0f;
+    private float y_size = 50.0f;
+    private float z_size = 50.0f;
     private float mass = 1.0f;
 
     private Vector3 initGrav = new Vector3(0, -9.81f, 0);
@@ -27,15 +27,23 @@ public class PlayerController : MonoBehaviour {
     public bool hasMaximizer = false;
     public bool hasIncreaseGrav = false;
     public bool hasDecreaseGrav = false;
+    public bool hasInstantSpeed = false;
+    public bool hasTimeSpeed = false;
+
+    //To determine if a pickup is currently in use by the player
     private bool minimizerActive = false;
     private bool maximizerActive = false;
     private bool increaseGravActive = false;
     private bool decreaseGravActive = false;
+    private bool timeSpeedActive = false;
     private int pickupDuration = 5;
     public bool hasIjump = false;
     private bool ijumpActive = false;
     public bool hasTbjump = false;
     private bool tbjumpActive = false;
+
+    //The power of the instant speed pickup
+    private float instantSpeedPower = 5000f;
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
@@ -57,6 +65,10 @@ public class PlayerController : MonoBehaviour {
             ActivateIjump();
         } else if (Input.GetKeyDown("6") && hasTbjump == true){
             ActivateTbjump();
+        }else if(Input.GetKeyDown("7") && hasInstantSpeed == true) {
+            ActicateInstantSpeed();
+        }else if (Input.GetKeyDown("8") && hasTimeSpeed == true){
+            ActicateTimeSpeed();
         }
     }
 
@@ -74,6 +86,7 @@ public class PlayerController : MonoBehaviour {
         
         if (inWater == false) {
             rb.AddForce(movement * speed);
+            Debug.Log(speed);
         } else {
             rb.AddForce(movement * (speed / 3));
         }
@@ -126,6 +139,10 @@ public class PlayerController : MonoBehaviour {
             hasIjump = true;
         } else if (other.gameObject.CompareTag("Tbjump")){
             hasTbjump = true;
+        }else if (other.gameObject.CompareTag("SpeedInstant")){
+            hasInstantSpeed = true;
+        }else if (other.gameObject.CompareTag("SpeedTime")){
+            hasTimeSpeed = true;
         }
     }
 
@@ -175,6 +192,8 @@ public class PlayerController : MonoBehaviour {
 
         hasIncreaseGrav = false;
         increaseGravActive = true;
+
+        StartCoroutine("GravTimer");
     }
 
     private void ActivateDecreaseGrav() {
@@ -185,6 +204,27 @@ public class PlayerController : MonoBehaviour {
 
         hasDecreaseGrav = false;
         decreaseGravActive = true;
+        StartCoroutine("GravTimer");
+    }
+
+    private void ActicateInstantSpeed() { 
+        //Set the movement to where the camera z-axis is pointing
+        Vector3 movement = new Vector3(0,0,1);
+        movement = Camera.main.transform.TransformDirection(movement);
+        
+        rb.AddForce(movement * instantSpeedPower);
+        hasInstantSpeed = false;
+    }
+
+    private void ActicateTimeSpeed() {
+        if (timeSpeedActive == true) {
+            StopCoroutine("SpeedTimer");
+        }
+        speed *= 2;
+
+        hasTimeSpeed = false;
+        timeSpeedActive = true;
+        StartCoroutine("SpeedTimer");
     }
 
     //acivates Ijump-pickup
@@ -226,5 +266,11 @@ public class PlayerController : MonoBehaviour {
     IEnumerator TbjumpTimer(){
         yield return new WaitForSeconds(pickupDuration);
         jumpSpeed =  jumpSpeed / 2 ;
+    }
+  
+    IEnumerator SpeedTimer(){
+        yield return new WaitForSeconds(pickupDuration);
+        speed = 15f;
+
     }
 }

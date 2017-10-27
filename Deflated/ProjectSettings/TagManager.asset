@@ -9,6 +9,9 @@ TagManager:
   - DecreaseGrav
   - IncreaseGrav
   - Ijump
+  - SpeedInstant
+  - SpeedTime
+
   layers:
   - Default
   - TransparentFX
