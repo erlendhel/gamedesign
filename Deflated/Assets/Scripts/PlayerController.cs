@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour {
     public bool hasDecreaseGrav = false;
     public bool hasInstantSpeed = false;
     public bool hasTimeSpeed = false;
+    public bool hasInstantJump = false;
+    public bool hasTimeJump = false;
 
     //To determine if a pickup is currently in use by the player
     private bool minimizerActive = false;
@@ -36,11 +38,10 @@ public class PlayerController : MonoBehaviour {
     private bool increaseGravActive = false;
     private bool decreaseGravActive = false;
     private bool timeSpeedActive = false;
+
     private int pickupDuration = 5;
-    public bool hasIjump = false;
-    private bool ijumpActive = false;
-    public bool hasTbjump = false;
-    private bool tbjumpActive = false;
+    
+    
 
     //The power of the instant speed pickup
     private float instantSpeedPower = 5000f;
@@ -61,10 +62,10 @@ public class PlayerController : MonoBehaviour {
             ActivateIncreaseGrav();
         } else if (Input.GetKeyDown("4") && hasDecreaseGrav == true) {
             ActivateDecreaseGrav();
-        } else if (Input.GetKeyDown("5") && hasIjump == true){
-            ActivateIjump();
-        } else if (Input.GetKeyDown("6") && hasTbjump == true){
-            ActivateTbjump();
+        } else if (Input.GetKeyDown("5") && hasInstantJump == true){
+            ActivateInstantJump();
+        } else if (Input.GetKeyDown("6") && hasTimeJump == true){
+            ActivateTimeJump();
         }else if(Input.GetKeyDown("7") && hasInstantSpeed == true) {
             ActicateInstantSpeed();
         }else if (Input.GetKeyDown("8") && hasTimeSpeed == true){
@@ -135,9 +136,9 @@ public class PlayerController : MonoBehaviour {
         } else if (other.gameObject.CompareTag("DecreaseGrav")) {
             hasDecreaseGrav = true;
         } else if (other.gameObject.CompareTag("Ijump")) {
-            hasIjump = true;
+            hasInstantJump = true;
         } else if (other.gameObject.CompareTag("Tbjump")){
-            hasTbjump = true;
+            hasTimeJump = true;
         }else if (other.gameObject.CompareTag("SpeedInstant")){
             hasInstantSpeed = true;
         }else if (other.gameObject.CompareTag("SpeedTime")){
@@ -226,13 +227,13 @@ public class PlayerController : MonoBehaviour {
         StartCoroutine("SpeedTimer");
     }
 
-    //acivates Ijump-pickup
-    private void ActivateIjump() {
+    //Activates Instant-jump pickup
+    private void ActivateInstantJump() {
         if (isGrounded == true && inWater == false) {
 
             rb.AddForce(Vector3.up * jumpSpeed * 3);
 
-            hasIjump = false;
+            hasInstantJump = false;
         }
 
         else{
@@ -240,13 +241,11 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    private void ActivateTbjump() {
-        
+    private void ActivateTimeJump() {
         jumpSpeed = jumpSpeed * 2;
       
-
-        hasTbjump = false;
-        StartCoroutine("TbjumpTimer");
+        hasTimeJump = false;
+        StartCoroutine("JumpTimer");
     }
 
     IEnumerator MaxMinTimer() {
@@ -262,7 +261,7 @@ public class PlayerController : MonoBehaviour {
         Physics.gravity = initGrav;
     }
 
-    IEnumerator TbjumpTimer(){
+    IEnumerator JumpTimer(){
         yield return new WaitForSeconds(pickupDuration);
         jumpSpeed =  jumpSpeed / 2 ;
     }

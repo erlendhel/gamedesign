@@ -16,11 +16,12 @@ public class CloudHandler : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
         transform.Translate(incrementX, 0.0f, incrementZ);
         timer += Time.deltaTime;
 
+        //Change direction of clouds after 40 seconds
         if (timer > 40.0f)
         {
             incrementZ *= -1;
