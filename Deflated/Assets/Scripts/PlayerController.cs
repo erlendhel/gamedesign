@@ -40,8 +40,8 @@ public class PlayerController : MonoBehaviour {
     private bool timeSpeedActive = false;
 
     private int pickupDuration = 5;
-    
-    
+
+    public bool hasKey = false;
 
     //The power of the instant speed pickup
     private float instantSpeedPower = 5000f;
@@ -144,6 +144,11 @@ public class PlayerController : MonoBehaviour {
         }else if (other.gameObject.CompareTag("SpeedTime")){
             hasTimeSpeed = true;
         }
+
+        if (other.gameObject.CompareTag("Key")){
+            hasKey = true;
+        }
+
     }
 
     // Function that activates the minimizer-pickup
