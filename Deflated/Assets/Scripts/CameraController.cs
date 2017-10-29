@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CameraController : MonoBehaviour
 {
     /*The transform of the player*/
@@ -27,6 +28,16 @@ public class CameraController : MonoBehaviour
     private float turnSpeedY = 1.0f;
     private float scrollSpeed = 4.0f;
 
+    public GameObject GameManager;
+    private PauseHandler pauseHandler;
+    
+
+
+    private void Start()
+    {
+        //Get the PauseHandler script. Used to check if the game is paused or not
+        pauseHandler = GameManager.GetComponent<PauseHandler>();
+    }
 
     private void Update()
     {
@@ -41,7 +52,8 @@ public class CameraController : MonoBehaviour
             mouseButtonIsHeldDown = false;
         }
 
-        if (mouseButtonIsHeldDown)
+        //If left mouse button is held down and the game is not paused
+        if (mouseButtonIsHeldDown && !pauseHandler.IsPaused())
         {
             //Get mouse coordinates
             currentX += Input.GetAxis("Mouse X") * turnSpeedX;
@@ -57,16 +69,21 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        //Set distance based on the player scrolling mouse wheel
-        scrollAmount *= (distanceToCamera * 0.3f);
-        distanceToCamera += scrollAmount;
-        distanceToCamera = Mathf.Clamp(distanceToCamera, SCROLL_MIN, SCROLL_MAX);
+        //If the game is not paused, the camera can be controlled
+        //NOTE: There might be another way to do this, but LateUpdate is not affected by Time.timeScale = 0
+        if (!pauseHandler.IsPaused())
+        {
+            //Set distance based on the player scrolling mouse wheel
+            scrollAmount *= (distanceToCamera * 0.3f);
+            distanceToCamera += scrollAmount;
+            distanceToCamera = Mathf.Clamp(distanceToCamera, SCROLL_MIN, SCROLL_MAX);
 
-        //Rotate camera and look at the player
-        Vector3 direction = new Vector3(0, 0, -distanceToCamera);
-        Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
-        transform.position = playerTransform.position + rotation * direction;
-        transform.LookAt(playerTransform.position);
+            //Rotate camera and look at the player
+            Vector3 direction = new Vector3(0, 0, -distanceToCamera);
+            Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
+            transform.position = playerTransform.position + rotation * direction;
+            transform.LookAt(playerTransform.position);
+        }
     }
 
 }
