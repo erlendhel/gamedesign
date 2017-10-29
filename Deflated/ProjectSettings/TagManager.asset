@@ -12,6 +12,7 @@ TagManager:
   - SpeedInstant
   - SpeedTime
   - Tbjump
+  - Key
   layers:
   - Default
   - TransparentFX
