@@ -7,30 +7,26 @@ public class LockHandler : MonoBehaviour
 
     private PlayerController playerHandler;
     public GameObject player;
-    private bool hasCollided = false;
-    private Vector3 startPosition;
+    private bool hasCollidedWithLock = false;
     private Vector3 endPosition;
 
-    float startTime;
+    public float speed = 5f;
 
 	// Use this for initialization
 	void Start ()
     {
         playerHandler = player.GetComponent<PlayerController>();
-        startPosition = transform.position;
-        endPosition = new Vector3(startPosition.x, startPosition.y + 2f, startPosition.z);
+        endPosition = new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z);
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (hasCollided)
+        if (hasCollidedWithLock)
         {
-            //Translates the game object over time with constant speed
-            float currentDuration = Time.time - startTime;
-            float totalDistance = Vector3.Distance(startPosition, endPosition);
-            float journeyFraction = currentDuration / totalDistance;
-            transform.position = Vector3.Lerp(startPosition, endPosition, journeyFraction);
+            //Translates the game object over time
+            float step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position,endPosition, step);
         }		
 	}
 
@@ -38,9 +34,8 @@ public class LockHandler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && playerHandler.hasKey)
         {
-            hasCollided = true;
+            hasCollidedWithLock = true;
             playerHandler.hasKey = false;
-            startTime = Time.time;
         }
     }
 
