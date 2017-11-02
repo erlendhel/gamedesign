@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
     public float speed = 15f;
-    public float jumpSpeed = 100.0f;
+    public float jumpSpeed = 500.0f;
     private bool isGrounded = true;
     private bool inWater = false;
     private Rigidbody rb;
+
+    public float vel;
 
 
 
@@ -52,6 +54,9 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Update() {
+
+        vel = rb.velocity.magnitude;
+
         if (Input.GetKeyDown("space") && isGrounded == true && inWater == false) {
             Jump();
         } else if (Input.GetKeyDown("1") && hasMinimizer == true) {
@@ -67,9 +72,9 @@ public class PlayerController : MonoBehaviour {
         } else if (Input.GetKeyDown("6") && hasTimeJump == true){
             ActivateTimeJump();
         }else if(Input.GetKeyDown("7") && hasInstantSpeed == true) {
-            ActicateInstantSpeed();
+            ActivateInstantSpeed();
         }else if (Input.GetKeyDown("8") && hasTimeSpeed == true){
-            ActicateTimeSpeed();
+            ActivateTimeSpeed();
         }
     }
 
@@ -107,17 +112,20 @@ public class PlayerController : MonoBehaviour {
      *  weird in-air behaviour such as double jumps.
      */
     private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.name == "Terrain") {
+        if (collision.gameObject.CompareTag("Terrain")) {
             isGrounded = true;
         }
         if (collision.gameObject.name == "Water") {
             inWater = true;
         }
+        if (collision.gameObject.CompareTag("BouncyMat")) {
+            rb.AddForce(Vector3.up * 1400);
+        }
     }
 
     // Function to detect if the game character is off the ground
     private void OnCollisionExit(Collision collision) {
-        if (collision.gameObject.name == "Terrain") {
+        if (collision.gameObject.CompareTag("Terrain")) {
             isGrounded = false;
         } else if (collision.gameObject.name == "Water") {
             inWater = false;
@@ -137,11 +145,11 @@ public class PlayerController : MonoBehaviour {
             hasDecreaseGrav = true;
         } else if (other.gameObject.CompareTag("Ijump")) {
             hasInstantJump = true;
-        } else if (other.gameObject.CompareTag("Tbjump")){
+        } else if (other.gameObject.CompareTag("Tbjump")) {
             hasTimeJump = true;
-        }else if (other.gameObject.CompareTag("SpeedInstant")){
+        } else if (other.gameObject.CompareTag("SpeedInstant")) {
             hasInstantSpeed = true;
-        }else if (other.gameObject.CompareTag("SpeedTime")){
+        } else if (other.gameObject.CompareTag("SpeedTime")) {
             hasTimeSpeed = true;
         }
 
@@ -212,7 +220,7 @@ public class PlayerController : MonoBehaviour {
         StartCoroutine("GravTimer");
     }
 
-    private void ActicateInstantSpeed() { 
+    private void ActivateInstantSpeed() { 
         //Set the movement to where the camera z-axis is pointing
         Vector3 movement = new Vector3(0,0,1);
         movement = Camera.main.transform.TransformDirection(movement);
@@ -221,7 +229,7 @@ public class PlayerController : MonoBehaviour {
         hasInstantSpeed = false;
     }
 
-    private void ActicateTimeSpeed() {
+    private void ActivateTimeSpeed() {
         if (timeSpeedActive == true) {
             StopCoroutine("SpeedTimer");
         }
