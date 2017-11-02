@@ -13,6 +13,7 @@ TagManager:
   - SpeedTime
   - Tbjump
   - Key
+  - Terrain
   layers:
   - Default
   - TransparentFX

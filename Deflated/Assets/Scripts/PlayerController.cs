@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour {
      *  weird in-air behaviour such as double jumps.
      */
     private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.name == "Terrain") {
+        if (collision.gameObject.CompareTag("Terrain")) {
             isGrounded = true;
         }
         if (collision.gameObject.name == "Water") {
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour {
 
     // Function to detect if the game character is off the ground
     private void OnCollisionExit(Collision collision) {
-        if (collision.gameObject.name == "Terrain") {
+        if (collision.gameObject.CompareTag("Terrain")) {
             isGrounded = false;
         } else if (collision.gameObject.name == "Water") {
             inWater = false;
