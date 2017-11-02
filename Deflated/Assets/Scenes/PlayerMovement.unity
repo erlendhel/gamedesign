@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657958, g: 0.49641377, b: 0.5748177, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657934, g: 0.4964134, b: 0.5748173, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -170,7 +170,9 @@ Transform:
   - {fileID: 2118383307}
   - {fileID: 895971033}
   m_Father: {fileID: 0}
+
   m_RootOrder: 7
+
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &34043725 stripped
 Transform:
@@ -728,6 +730,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7bdcc2b66fc1680418df54d7b74c34e2, type: 3}
   m_IsPrefabParent: 0
+
 --- !u!4 &132036488 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4672206633525014, guid: 5343f31619f10d744b238f7d1fd93a73,
@@ -738,6 +741,7 @@ Transform:
   m_PrefabParentObject: {fileID: 4129361171306364, guid: 8d1e31c8a620f7b4fa9258fd241f530e,
     type: 2}
   m_PrefabInternal: {fileID: 1574907890}
+
 --- !u!1001 &189273655
 Prefab:
   m_ObjectHideFlags: 0
@@ -1055,7 +1059,7 @@ SphereCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 271217723}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3ba5ca0f1268122408b3ed7e08216692, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1424,6 +1428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incrementX: 0.001
   incrementZ: 0.002
+
 --- !u!1 &414842882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,7 +2187,9 @@ Transform:
   - {fileID: 1799447683}
   - {fileID: 373044772}
   m_Father: {fileID: 0}
+
   m_RootOrder: 6
+
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &614937413 stripped
 Transform:
@@ -2865,7 +2872,7 @@ TerrainCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 745911364}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 507891d960ab8ad42a4543687c558786, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 5d1a7380bf756c942ba61da8d98ac6ef, type: 2}
   m_EnableTreeColliders: 1
@@ -5377,6 +5384,10 @@ Prefab:
     - target: {fileID: 400000, guid: cb4e8fb2b2de98b41a22b2ecd6d6d3fa, type: 3}
       propertyPath: m_LocalScale.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: cb4e8fb2b2de98b41a22b2ecd6d6d3fa, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb4e8fb2b2de98b41a22b2ecd6d6d3fa, type: 3}
