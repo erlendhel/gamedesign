@@ -24,10 +24,12 @@ public class PlayerController : MonoBehaviour {
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
+        CurrencyManager.currencyManager.Load();
         initScale = transform.localScale;
         initMass = rb.mass;
         spawnPosition = rb.position;
         Physics.gravity = initGrav;
+        print(Application.persistentDataPath);
     }
 
     private void Update() {
@@ -94,7 +96,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public Vector3 getSpawnPosition() {
+    public Vector3 GetSpawnPosition() {
         return spawnPosition;
     }
 }

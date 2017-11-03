@@ -26,18 +26,29 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () {
         currentHealth -= healthDecrease * Time.deltaTime;
         if (currentHealth < 0) {
-            transform.position = playerController.getSpawnPosition();
+            transform.position = playerController.GetSpawnPosition();
             currentHealth = 100.0f;
         }
 	}
 
     private void OnTriggerEnter(Collider bubble) {
         if (bubble.gameObject.CompareTag("SmallBubble")) {
+            CurrencyManager.currencyManager.currency += smallIncrease;
+            CurrencyManager.currencyManager.Save();
             currentHealth += smallIncrease;
         } else if (bubble.gameObject.CompareTag("MediumBubble")) {
+            CurrencyManager.currencyManager.currency += mediumIncrease;
+            CurrencyManager.currencyManager.Save();
             currentHealth += mediumIncrease;
         } else if (bubble.gameObject.CompareTag("LargeBubble")) {
+            CurrencyManager.currencyManager.currency += bigIncrease;
+            CurrencyManager.currencyManager.Save();
             currentHealth += bigIncrease;
         }
     }
+
+    private void OnGUI() {
+        GUI.Label(new Rect(10, 10, 100, 30), "Health: " + currentHealth);
+    }
+
 }
