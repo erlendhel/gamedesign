@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ActionController : MonoBehaviour {
 
-    PlayerInventory playerInventory;
     PlayerController playerController;
 
     // Variables indicating if pickups have been activated
@@ -20,28 +19,35 @@ public class ActionController : MonoBehaviour {
     private int pickupDuration = 5;
 
     private void Start() {
-        playerInventory = GetComponent<PlayerInventory>();
         playerController = GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update () {
-        if (Input.GetKeyDown("1") && playerInventory.hasMinimizer == true) {
+        if (Input.GetKeyDown("1") && PlayerInventory.hasMinimizer == true) {
             ActivateMinimizer();
-        } else if (Input.GetKeyDown("2") && playerInventory.hasMaximizer == true) {
+            GUIController.guiController.minimizerButton.interactable = false;
+        } else if (Input.GetKeyDown("2") && PlayerInventory.hasMaximizer == true) {
             ActivateMaximizer();
-        } else if (Input.GetKeyDown("3") && playerInventory.hasIncreaseGrav == true) {
+            GUIController.guiController.maximizerButton.interactable = false;
+        } else if (Input.GetKeyDown("3") && PlayerInventory.hasIncreaseGrav == true) {
             ActivateIncreaseGrav();
-        } else if (Input.GetKeyDown("4") && playerInventory.hasDecreaseGrav == true) {
+            GUIController.guiController.increaseGravButton.interactable = false;
+        } else if (Input.GetKeyDown("4") && PlayerInventory.hasDecreaseGrav == true) {
             ActivateDecreaseGrav();
-        } else if (Input.GetKeyDown("5") && playerInventory.hasInstantJump == true) {
+            GUIController.guiController.decreaseGravButton.interactable = false;
+        } else if (Input.GetKeyDown("5") && PlayerInventory.hasInstantJump == true) {
             ActivateInstantJump();
-        } else if (Input.GetKeyDown("6") && playerInventory.hasTimeBasedJump == true) {
+            GUIController.guiController.instantJumpButton.interactable = false;
+        } else if (Input.GetKeyDown("6") && PlayerInventory.hasTimeBasedJump == true) {
             ActivateTimeJump();
-        } else if (Input.GetKeyDown("7") && playerInventory.hasInstantSpeed == true) {
+            GUIController.guiController.timedJumpButton.interactable = false;
+        } else if (Input.GetKeyDown("7") && PlayerInventory.hasInstantSpeed == true) {
             ActivateInstantSpeed();
-        } else if (Input.GetKeyDown("8") && playerInventory.hasTimeBasedSpeed == true) {
+            GUIController.guiController.instantSpeedButton.interactable = false;
+        } else if (Input.GetKeyDown("8") && PlayerInventory.hasTimeBasedSpeed == true) {
             ActivateTimeSpeed();
+            GUIController.guiController.timedSpeedButton.interactable = false;
         }
     }
 
@@ -57,7 +63,7 @@ public class ActionController : MonoBehaviour {
         playerController.rb.mass = playerController.initMass / 2;
 
         // "Delete" the minimizer from the inventory
-        playerInventory.hasMinimizer = false;
+        PlayerInventory.hasMinimizer = false;
         // Set the minimizer to active
         minimizerActive = true;
         // Start coroutine to time and cancel the pickup
@@ -77,7 +83,7 @@ public class ActionController : MonoBehaviour {
         playerController.rb.mass = playerController.initMass * 2;
 
         // "Delete" the maximizer from the inventory
-        playerInventory.hasMaximizer = false;
+        PlayerInventory.hasMaximizer = false;
         // Set the maximizer to active
         maximizerActive = true;
         // Start coroutine to time and cancel the pickup
@@ -93,7 +99,7 @@ public class ActionController : MonoBehaviour {
 
         Physics.gravity = increaseGrav;
 
-        playerInventory.hasIncreaseGrav = false;
+        PlayerInventory.hasIncreaseGrav = false;
         increaseGravActive = true;
 
         StartCoroutine("GravTimer");
@@ -105,7 +111,7 @@ public class ActionController : MonoBehaviour {
         }
         Physics.gravity = decreaseGrav;
 
-        playerInventory.hasDecreaseGrav = false;
+        PlayerInventory.hasDecreaseGrav = false;
         decreaseGravActive = true;
         StartCoroutine("GravTimer");
     }
@@ -116,7 +122,7 @@ public class ActionController : MonoBehaviour {
         movement = Camera.main.transform.TransformDirection(movement);
 
         playerController.rb.AddForce(movement * instantSpeedPower);
-        playerInventory.hasInstantSpeed = false;
+        PlayerInventory.hasInstantSpeed = false;
     }
 
     public void ActivateTimeSpeed() {
@@ -125,7 +131,7 @@ public class ActionController : MonoBehaviour {
         }
         playerController.speed *= 2;
 
-        playerInventory.hasTimeBasedSpeed = false;
+        PlayerInventory.hasTimeBasedSpeed = false;
         timeBasedSpeedActive = true;
         StartCoroutine("SpeedTimer");
     }
@@ -137,7 +143,7 @@ public class ActionController : MonoBehaviour {
 
             playerController.rb.AddForce(Vector3.up * playerController.jumpSpeed * 3);
 
-            playerInventory.hasInstantJump = false;
+            PlayerInventory.hasInstantJump = false;
         } else {
             playerController.rb.AddForce(Vector3.up * playerController.jumpSpeed);
         }
@@ -145,7 +151,7 @@ public class ActionController : MonoBehaviour {
 
     public void ActivateTimeJump() {
         playerController.jumpSpeed = playerController.jumpSpeed * 2;
-        playerInventory.hasTimeBasedJump = false;
+        PlayerInventory.hasTimeBasedJump = false;
         StartCoroutine("JumpTimer");
     }
 
