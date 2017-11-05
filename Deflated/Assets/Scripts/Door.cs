@@ -11,7 +11,6 @@ public class Door : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        
         lastBucketY = bucket.transform.position.y;
     }
 	
