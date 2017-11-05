@@ -8,13 +8,16 @@ TagManager:
   - Maximizer
   - DecreaseGrav
   - IncreaseGrav
-  - Ijump
   - SpeedInstant
   - SpeedTime
-  - Tbjump
   - Key
   - BouncyMat
   - Terrain
+  - InstantJump
+  - TimeBasedJump
+  - SmallBubble
+  - MediumBubble
+  - LargeBubble
   layers:
   - Default
   - TransparentFX
