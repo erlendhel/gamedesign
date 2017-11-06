@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // Class controlling all health related behaviour of the game character
 public class PlayerHealth : MonoBehaviour {
 
     PlayerController playerController;
+    public static PlayerHealth playerHealth;
 
     private float initialHealth = 100.0f;
     private float healthDecrease = 2.0f;
@@ -16,8 +18,14 @@ public class PlayerHealth : MonoBehaviour {
     private float bigIncrease = 20.0f;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    private void Awake() {
+        if (playerHealth == null) {
+            playerHealth = this;
+        }
+    }
+
+    void Start () {
         playerController = GetComponent<PlayerController>();
         currentHealth = initialHealth;
 	}
@@ -35,20 +43,27 @@ public class PlayerHealth : MonoBehaviour {
         if (bubble.gameObject.CompareTag("SmallBubble")) {
             CurrencyManager.currencyManager.currency += smallIncrease;
             CurrencyManager.currencyManager.Save();
-            currentHealth += smallIncrease;
+            if ((currentHealth + smallIncrease) >= 100.0f) {
+                currentHealth = 100.0f;
+            } else {
+                currentHealth += smallIncrease;
+            }
         } else if (bubble.gameObject.CompareTag("MediumBubble")) {
             CurrencyManager.currencyManager.currency += mediumIncrease;
             CurrencyManager.currencyManager.Save();
-            currentHealth += mediumIncrease;
+            if ((currentHealth + mediumIncrease) >= 100.0f) {
+                currentHealth = 100.0f;
+            } else {
+                currentHealth += mediumIncrease;
+            }
         } else if (bubble.gameObject.CompareTag("LargeBubble")) {
             CurrencyManager.currencyManager.currency += bigIncrease;
             CurrencyManager.currencyManager.Save();
-            currentHealth += bigIncrease;
+            if ((currentHealth + bigIncrease) >= 100.0f) {
+                currentHealth = 100.0f;
+            } else {
+                currentHealth += bigIncrease;
+            }
         }
     }
-
-    private void OnGUI() {
-        GUI.Label(new Rect(10, 10, 100, 30), "Health: " + currentHealth);
-    }
-
 }
