@@ -2,8 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour {
+
+    public Text currencyIndicator;
+
+    private void Start() {
+        CurrencyManager.currencyManager.Load();
+        currencyIndicator.text = "Currency: " + CurrencyManager.currencyManager.currency.ToString();
+    }
 
     public void PlayGame()
     {

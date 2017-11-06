@@ -3,11 +3,11 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CurrencyManager : MonoBehaviour {
 
     public static CurrencyManager currencyManager;
-
     public float currency;
 
     private void Awake() {

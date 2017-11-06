@@ -30,24 +30,24 @@ public class ActionController : MonoBehaviour {
         } else if (Input.GetKeyDown("2") && PlayerInventory.hasMaximizer == true) {
             ActivateMaximizer();
             GUIController.guiController.maximizerButton.interactable = false;
-        } else if (Input.GetKeyDown("3") && PlayerInventory.hasIncreaseGrav == true) {
-            ActivateIncreaseGrav();
-            GUIController.guiController.increaseGravButton.interactable = false;
-        } else if (Input.GetKeyDown("4") && PlayerInventory.hasDecreaseGrav == true) {
+        } else if (Input.GetKeyDown("3") && PlayerInventory.hasDecreaseGrav == true) {
             ActivateDecreaseGrav();
             GUIController.guiController.decreaseGravButton.interactable = false;
-        } else if (Input.GetKeyDown("5") && PlayerInventory.hasInstantJump == true) {
-            ActivateInstantJump();
-            GUIController.guiController.instantJumpButton.interactable = false;
-        } else if (Input.GetKeyDown("6") && PlayerInventory.hasTimeBasedJump == true) {
-            ActivateTimeJump();
-            GUIController.guiController.timedJumpButton.interactable = false;
-        } else if (Input.GetKeyDown("7") && PlayerInventory.hasInstantSpeed == true) {
-            ActivateInstantSpeed();
-            GUIController.guiController.instantSpeedButton.interactable = false;
-        } else if (Input.GetKeyDown("8") && PlayerInventory.hasTimeBasedSpeed == true) {
+        } else if (Input.GetKeyDown("4") && PlayerInventory.hasIncreaseGrav == true) {
+            ActivateIncreaseGrav();
+            GUIController.guiController.increaseGravButton.interactable = false;
+        } else if (Input.GetKeyDown("5") && PlayerInventory.hasTimeBasedSpeed == true) {
             ActivateTimeSpeed();
             GUIController.guiController.timedSpeedButton.interactable = false;
+        } else if (Input.GetKeyDown("6") && PlayerInventory.hasInstantSpeed == true) {
+            ActivateInstantSpeed();
+            GUIController.guiController.instantSpeedButton.interactable = false;
+        } else if (Input.GetKeyDown("7") && PlayerInventory.hasTimeBasedJump == true) {
+            ActivateTimeJump();
+            GUIController.guiController.timedJumpButton.interactable = false;
+        } else if (Input.GetKeyDown("8") && PlayerInventory.hasInstantJump == true) {
+            ActivateInstantJump();
+            GUIController.guiController.instantJumpButton.interactable = false;
         }
     }
 
