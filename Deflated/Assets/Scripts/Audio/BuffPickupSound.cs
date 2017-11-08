@@ -6,6 +6,6 @@ public class BuffPickupSound : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        FindObjectOfType<AudioManager>().Play("Pickup");
+        AudioManager.instance.Play("Pickup");
     }
 }

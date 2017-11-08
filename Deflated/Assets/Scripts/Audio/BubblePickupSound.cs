@@ -6,6 +6,6 @@ public class BubblePickupSound : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collider)
     {
-        FindObjectOfType<AudioManager>().Play("BubblePickup");
+        AudioManager.instance.Play("BubblePickup");
     }
 }
