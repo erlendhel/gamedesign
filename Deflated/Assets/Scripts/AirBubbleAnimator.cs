@@ -8,7 +8,7 @@ public class AirBubbleAnimator : MonoBehaviour {
     private float yLowerBoundary;
     private Vector3 startPosition;
     private bool goingUpwards;
-    private float increment = 0.009f;
+    private float increment = 0.005f;
 
 	// Use this for initialization
 	void Start ()
