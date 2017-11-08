@@ -885,6 +885,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2021876352}
     m_Modifications:
+    - target: {fileID: 114462290288588984, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4136655084179934, guid: 6426889c3c6ca3f4d9bf2074b420fa8f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -916,6 +921,26 @@ Prefab:
     - target: {fileID: 4136655084179934, guid: 6426889c3c6ca3f4d9bf2074b420fa8f, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114462290288588984, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[2].name
+      value: Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 114462290288588984, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c5b01f7c26383e748ab0ff59b2052edc, type: 3}
+    - target: {fileID: 114462290288588984, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[2].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114462290288588984, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6426889c3c6ca3f4d9bf2074b420fa8f, type: 2}
