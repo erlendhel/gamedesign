@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1226297077567702}
+  m_RootGameObject: {fileID: 1136079340405412}
   m_IsPrefabParent: 1
---- !u!1 &1226297077567702
+--- !u!1 &1136079340405412
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4136655084179934}
-  - component: {fileID: 114462290288588984}
+  - component: {fileID: 4353373811524544}
+  - component: {fileID: 114153111332003314}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -27,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4136655084179934
+--- !u!4 &4353373811524544
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1226297077567702}
+  m_GameObject: {fileID: 1136079340405412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +40,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114462290288588984
+--- !u!114 &114153111332003314
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1226297077567702}
+  m_GameObject: {fileID: 1136079340405412}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2332f28b00a63d3488954494b4bc7a4e, type: 3}
@@ -60,6 +60,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: BubblePickup
     clip: {fileID: 8300000, guid: 246aa42b4af46664da33f1344990419b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pickup
+    clip: {fileID: 8300000, guid: c5b01f7c26383e748ab0ff59b2052edc, type: 3}
     volume: 1
     pitch: 1
     loop: 0
