@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23993089122131656}
   - component: {fileID: 114160008248274492}
   - component: {fileID: 114024101111969752}
+  - component: {fileID: 114946978618418406}
   m_Layer: 0
   m_Name: MediumAirBubble
   m_TagString: MediumBubble
@@ -103,6 +104,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7aac6b22e3d11fe428ff408bb3254120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114946978618418406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1463792561455324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb7fc19a575b68a4b8a27e340e87c1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &135822443682762142
