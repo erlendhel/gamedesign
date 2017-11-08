@@ -38,9 +38,8 @@ public class AudioManager : MonoBehaviour {
             return;
         }
 
-
         // Play the sound
-        Debug.Log("Playing sound: " + name);
         soundToPlay.source.Play();
+        Debug.Log("Playing sound: " + name);
     }
 }
