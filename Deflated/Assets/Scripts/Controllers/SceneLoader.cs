@@ -47,7 +47,7 @@ public class SceneLoader : MonoBehaviour {
     {
         //Store the scene the player entered the shop from
         PlayerPrefs.SetString("lastLoadedScene", SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 
     public void PreviousScene()
