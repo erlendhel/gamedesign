@@ -997,6 +997,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a1cedc70352cbc747bbabac254a9f765, type: 2}
+    - target: {fileID: 23611985126188834, guid: 6f1cac6be1a8b0b48b2d8ebb84142804,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 78fe9ba4e64265f418c858e1452a03a5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f1cac6be1a8b0b48b2d8ebb84142804, type: 2}
   m_IsPrefabParent: 0
@@ -1010,7 +1015,7 @@ Prefab:
     - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
         type: 2}
       propertyPath: sounds.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4831263142932898, guid: 6426889c3c6ca3f4d9bf2074b420fa8f, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1077,6 +1082,46 @@ Prefab:
     - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
         type: 2}
       propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[4].name
+      value: RockHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 15ac7bcdbd420f44bb9e112da2c56b76, type: 3}
+    - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[5].name
+      value: MovingRock
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ccde01d719af6774e8581b9735de7f82, type: 3}
+    - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[5].pitch
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1154,6 +1199,22 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224792306255334360, guid: b1f92fabbf7723a449795a97be247b61,
     type: 2}
   m_PrefabInternal: {fileID: 1210154178}
+--- !u!1 &1144303025 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1465989435369926, guid: 6f1cac6be1a8b0b48b2d8ebb84142804,
+    type: 2}
+  m_PrefabInternal: {fileID: 960042515}
+--- !u!114 &1144303032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1144303025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1a44b106ef416448a191581d51e429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1160449395 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4974121509622544, guid: e8616f801054e98488d6e051f168c645,
@@ -1828,6 +1889,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9fa401d8f0fc574d9dd5578f079079b, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1540235785 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1809931668747210, guid: 6f1cac6be1a8b0b48b2d8ebb84142804,
+    type: 2}
+  m_PrefabInternal: {fileID: 960042515}
+--- !u!114 &1540235792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540235785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1a44b106ef416448a191581d51e429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1583929482 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4831263142932898, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
