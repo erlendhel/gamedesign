@@ -8,11 +8,14 @@ public class Door : MonoBehaviour {
 
     private float lastBucketY;
     private bool isMoving = false;
+    private Rigidbody bucketRigidBody;
 
 	// Use this for initialization
 	void Start ()
     {
         lastBucketY = bucket.transform.position.y;
+        bucketRigidBody = bucket.gameObject.GetComponent<Rigidbody>();
+
     }
 	
 	// Update is called once per frame
@@ -20,22 +23,12 @@ public class Door : MonoBehaviour {
     {
         float currentBucketY = bucket.transform.position.y;
         float yToTranslate = (currentBucketY - lastBucketY) * -1;
-
+        
         // Used to determine if a sound effect should be played. 
-        // Bigger than or equal to 0.01f to ensure no audio at start of scene
-        if (yToTranslate >= 0.001f)
-        {
-            Debug.Log("isMoving = true");
+        if (bucketRigidBody.velocity.magnitude >= 0.1f)
             isMoving = true;
-        }
         else
-        {
-            Debug.Log("isMoving = true");
             isMoving = false;
-        }
-            
-
-        Debug.Log(yToTranslate);
 
         // If the door is moving, and the SFX hasn't started playing, start playing SFX
         if (isMoving && !AudioManager.instance.IsPlaying("PulleyOperating"))
