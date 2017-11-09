@@ -1007,6 +1007,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2021876352}
     m_Modifications:
+    - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4831263142932898, guid: 6426889c3c6ca3f4d9bf2074b420fa8f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1053,6 +1058,26 @@ Prefab:
         type: 2}
       propertyPath: sounds.Array.data[0].volume
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[3].name
+      value: PulleyOperating
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 82bfca86935f9594bb5e8aca685048e5, type: 3}
+    - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 114859763663358172, guid: 6426889c3c6ca3f4d9bf2074b420fa8f,
+        type: 2}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6426889c3c6ca3f4d9bf2074b420fa8f, type: 2}
