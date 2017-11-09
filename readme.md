@@ -19,4 +19,7 @@ Class containing all player-activated behaviour (except Jump() which is in Contr
 
 
 ### Music
-https://www.bensound.com
+Music obtained from https://www.bensound.com
+
+### Sound effects
+Sound effects obtained from https://www.zapsplat.com
