@@ -18,6 +18,13 @@ TagManager:
   - SmallBubble
   - MediumBubble
   - LargeBubble
+  - Tbjump
+  - Ijump
+  - Rope
+  - ThirdKeyPart
+  - SecondKeyPart
+  - FirstKeyPart
+  - MultiKeyPartsLock
   layers:
   - Default
   - TransparentFX
