@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23958054060279924}
   - component: {fileID: 114298777859319630}
   - component: {fileID: 114095664336914298}
+  - component: {fileID: 114556367633798568}
   m_Layer: 0
   m_Name: LargeAirBubble
   m_TagString: LargeBubble
@@ -103,6 +104,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7aac6b22e3d11fe428ff408bb3254120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114556367633798568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1023443078413322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb7fc19a575b68a4b8a27e340e87c1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &135787714968558594
