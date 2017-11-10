@@ -57,6 +57,16 @@ ModelImporter:
     4300014: Coconut
     4300016: Coconut1
     4300018: Coconut2
+    6400000: Coconut
+    6400002: Coconut1
+    6400004: Coconut2
+    6400006: PalmLeaf
+    6400008: PalmLeaf1
+    6400010: PalmLeaf2
+    6400012: PalmLeaf3
+    6400014: PalmLeaf4
+    6400016: PalmLeaf5
+    6400018: Trunk
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -87,7 +97,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
