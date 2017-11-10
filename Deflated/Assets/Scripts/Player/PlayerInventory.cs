@@ -64,17 +64,17 @@ public class PlayerInventory : MonoBehaviour {
         else if (pickup.gameObject.CompareTag("FirstKeyPart"))
         {
             hasFirstKeyPart = true;
-            Debug.Log("HasFirstKeyPart");
+            GUIController.guiController.SetKeyImage();
         }
         else if (pickup.gameObject.CompareTag("SecondKeyPart"))
         {
             hasSecondKeyPart = true;
-            Debug.Log("HasSecondKeyPart");
+            GUIController.guiController.SetKeyImage();
         }
         else if (pickup.gameObject.CompareTag("ThirdKeyPart"))
         {
             hasThirdKeyPart = true;
-            Debug.Log("HasThirdKeyPart");
+            GUIController.guiController.SetKeyImage();
         }
     }
 
@@ -88,5 +88,35 @@ public class PlayerInventory : MonoBehaviour {
     public static bool HasAllKeyParts()
     {
         return hasFirstKeyPart && hasSecondKeyPart && hasThirdKeyPart;
+    }
+
+    public static bool HasBottomKeyPart()
+    {
+        return hasFirstKeyPart && !hasSecondKeyPart && !hasThirdKeyPart;
+    }
+
+    public static bool HasMiddleKeyPart()
+    {
+        return !hasFirstKeyPart && hasSecondKeyPart && !hasThirdKeyPart;
+    }
+
+    public static bool HasTopKeyPart()
+    {
+        return !hasFirstKeyPart && !hasSecondKeyPart && hasThirdKeyPart;
+    }
+
+    public static bool HasBottomAndMiddleKeyPart()
+    {
+        return hasFirstKeyPart && hasSecondKeyPart && !hasThirdKeyPart;
+    }
+
+    public static bool HasMiddleAndTopKeyPart()
+    {
+        return !hasFirstKeyPart && hasSecondKeyPart && hasThirdKeyPart;
+    }
+
+    public static bool HasTopAndBottomKeyPart()
+    {
+        return hasFirstKeyPart && !hasSecondKeyPart && hasThirdKeyPart;
     }
 }
