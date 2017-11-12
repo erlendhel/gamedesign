@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.CompareTag("Terrain")) {
             isGrounded = true;
         }
-        if (collision.gameObject.name == "Water") {
+        if (collision.gameObject.CompareTag("Water")) {
             inWater = true;
         }
         if (collision.gameObject.CompareTag("BouncyMat")) {
@@ -91,12 +91,17 @@ public class PlayerController : MonoBehaviour {
     private void OnCollisionExit(Collision collision) {
         if (collision.gameObject.CompareTag("Terrain")) {
             isGrounded = false;
-        } else if (collision.gameObject.name == "Water") {
+        } else if (collision.gameObject.CompareTag("Water")) {
             inWater = false;
         }
     }
 
     public Vector3 GetSpawnPosition() {
         return spawnPosition;
+    }
+
+    public bool IsGrounded()
+    {
+        return isGrounded;
     }
 }

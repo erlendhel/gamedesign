@@ -25,6 +25,7 @@ TagManager:
   - SecondKeyPart
   - FirstKeyPart
   - MultiKeyPartsLock
+  - Water
   layers:
   - Default
   - TransparentFX
