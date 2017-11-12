@@ -18,6 +18,7 @@ TagManager:
   - SmallBubble
   - MediumBubble
   - LargeBubble
+  - Button
   layers:
   - Default
   - TransparentFX
