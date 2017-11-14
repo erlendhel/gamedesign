@@ -24,4 +24,8 @@ public class ButtonHandler : MonoBehaviour {
             isPressed = true;
         }
     }
+
+    public bool getState() {
+        return isPressed;
+    }
 }
