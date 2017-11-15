@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour {
 
     public Vector3 spawnPosition;
 
+    private bool rollingSoundStarted = false;
+
     public bool hasKey = false;
 
     private void Start() {
@@ -59,6 +61,26 @@ public class PlayerController : MonoBehaviour {
         } else {
             rb.AddForce(movement * (speed / 3));
         }
+
+
+        // Set sound for the ball rolling
+        if (rb.velocity.magnitude >= 3f && !rollingSoundStarted && isGrounded)
+        {
+            //Used on first time entering this if-condition, because the sound should only be started once
+            AudioManager.instance.Play("Rolling");
+            rollingSoundStarted = true;
+        }
+        else if (AudioManager.instance.IsPlaying("Rolling") && (rb.velocity.magnitude < 3f || !isGrounded))
+        {
+            AudioManager.instance.Pause("Rolling");
+        }
+        else if (!AudioManager.instance.IsPlaying("Rolling") && rb.velocity.magnitude >= 3f && isGrounded)
+        {
+            AudioManager.instance.UnPause("Rolling");
+        }
+        
+
+
     }
 
     /*
@@ -67,6 +89,7 @@ public class PlayerController : MonoBehaviour {
      *  of buffs, pickups etc.  
      */
     private void Jump() {
+        AudioManager.instance.Play("Jump");
         rb.AddForce(Vector3.up * jumpSpeed);
     }
 

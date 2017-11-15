@@ -16,15 +16,14 @@ public class GrassSound : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-        // TODO: Stop playing grass sound when player is in air
         Debug.Log(playerRigidBody.velocity.magnitude);
-        if (other.gameObject.CompareTag("Player") && playerRigidBody.velocity.magnitude >= 2f && playerController.IsGrounded())
+        if (other.gameObject.CompareTag("Player") && playerRigidBody.velocity.magnitude >= 3f && playerController.IsGrounded())
         {
             if(!AudioManager.instance.IsPlaying("GrassRustling"))
                 AudioManager.instance.Play("GrassRustling");
         }
 
-        if (playerRigidBody.velocity.magnitude <= 2f)
+        if (playerRigidBody.velocity.magnitude <= 3f)
         {
             AudioManager.instance.Stop("GrassRustling");
         }
