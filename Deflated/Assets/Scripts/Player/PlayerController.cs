@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown("space") && isGrounded) {
             Jump();
         }
-
     }
 
     private void FixedUpdate() {
@@ -55,7 +54,7 @@ public class PlayerController : MonoBehaviour {
         movement.y = 0.0f;
 
         movement = Vector3.Normalize(movement);
-        
+
         if (inWater == false) {
             rb.AddForce(movement * speed);
         } else {
