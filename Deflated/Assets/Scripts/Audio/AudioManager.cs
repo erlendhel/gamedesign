@@ -36,6 +36,7 @@ public class AudioManager : MonoBehaviour {
     void Start()
     {
         Play("ThemeSong");
+        
     }
 
     public void Play(string name)
@@ -68,6 +69,36 @@ public class AudioManager : MonoBehaviour {
 
         soundToStop.source.Stop();
         Debug.Log("Stopped playing sound: " + name);
+    }
+
+    public void Pause(string name)
+    {
+        Sound soundToPause = Array.Find(sounds, sound => sound.name == name);
+
+        // If the sound is not found, return
+        if (soundToPause == null)
+        {
+            Debug.LogWarning("Could not find audio with name: " + name);
+            return;
+        }
+
+        soundToPause.source.Pause();
+        Debug.Log("Paused sound: " + name);
+    }
+
+    public void UnPause(string name)
+    {
+        Sound soundToUnPause = Array.Find(sounds, sound => sound.name == name);
+
+        // If the sound is not found, return
+        if (soundToUnPause == null)
+        {
+            Debug.LogWarning("Could not find audio with name: " + name);
+            return;
+        }
+
+        soundToUnPause.source.UnPause();
+        Debug.Log("Un-paused sound: " + name);
     }
 
     public bool IsPlaying(string name)
