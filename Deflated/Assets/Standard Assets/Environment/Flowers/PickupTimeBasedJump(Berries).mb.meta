@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: db16f477bc6cf29498856aa176748e14
+timeCreated: 1510740825
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Berries
+    100002: Leaf1
+    100004: Leaf2
+    100006: Leaf3
+    100008: Leaf4
+    100010: Leaf5
+    100012: Leaf6
+    100014: Leafs
+    100016: pasted__Berry1
+    100018: pasted__Berry1 1
+    100020: pasted__Berry2
+    100022: pasted__Berry2 1
+    100024: pasted__Berry3
+    100026: pasted__Berry3 1
+    100028: pasted__Berry4
+    100030: pasted__Berry4 1
+    100032: pasted__Berry5
+    100034: pasted__Berry5 1
+    100036: pasted__Berry6
+    100038: pasted__Berry6 1
+    100040: pasted__Berry7
+    100042: pasted__Berry7 1
+    100044: pasted__pasted__Berry
+    100046: pasted__pasted__Berry 1
+    100048: pasted__pasted__Berry 2
+    100050: pasted__pasted__Berry 3
+    100052: pasted__pasted__Berry 4
+    100054: pasted__pasted__Berry 5
+    100056: pasted__pasted__Berry 6
+    100058: pasted__pasted__Berry 7
+    100060: pasted__pasted__Berry 8
+    100062: pasted__pasted__Berry 9
+    100064: pasted__pasted__pasted__pSphere1
+    100066: pasted__pasted__pasted__pSphere1 1
+    100068: pasted__pasted__pasted__pSphere1 2
+    100070: pasted__pasted__pasted__pSphere1 3
+    100072: pasted__pasted__pasted__pSphere1 4
+    100074: pasted__pasted__pasted__pSphere1 5
+    100076: pasted__pasted__pasted__pSphere1 6
+    100078: pasted__pasted__pCylinder1
+    100080: pasted__pasted__pCylinder1 1
+    100082: pasted__pasted__pCylinder1 2
+    100084: pasted__pasted__pCylinder1 3
+    100086: pasted__pasted__pCylinder1 4
+    100088: pasted__pasted__pCylinder1 5
+    100090: pasted__pasted__pCylinder1 6
+    100092: //RootNode
+    100094: Stem
+    400000: Berries
+    400002: Leaf1
+    400004: Leaf2
+    400006: Leaf3
+    400008: Leaf4
+    400010: Leaf5
+    400012: Leaf6
+    400014: Leafs
+    400016: pasted__Berry1
+    400018: pasted__Berry1 1
+    400020: pasted__Berry2
+    400022: pasted__Berry2 1
+    400024: pasted__Berry3
+    400026: pasted__Berry3 1
+    400028: pasted__Berry4
+    400030: pasted__Berry4 1
+    400032: pasted__Berry5
+    400034: pasted__Berry5 1
+    400036: pasted__Berry6
+    400038: pasted__Berry6 1
+    400040: pasted__Berry7
+    400042: pasted__Berry7 1
+    400044: pasted__pasted__Berry
+    400046: pasted__pasted__Berry 1
+    400048: pasted__pasted__Berry 2
+    400050: pasted__pasted__Berry 3
+    400052: pasted__pasted__Berry 4
+    400054: pasted__pasted__Berry 5
+    400056: pasted__pasted__Berry 6
+    400058: pasted__pasted__Berry 7
+    400060: pasted__pasted__Berry 8
+    400062: pasted__pasted__Berry 9
+    400064: pasted__pasted__pasted__pSphere1
+    400066: pasted__pasted__pasted__pSphere1 1
+    400068: pasted__pasted__pasted__pSphere1 2
+    400070: pasted__pasted__pasted__pSphere1 3
+    400072: pasted__pasted__pasted__pSphere1 4
+    400074: pasted__pasted__pasted__pSphere1 5
+    400076: pasted__pasted__pasted__pSphere1 6
+    400078: pasted__pasted__pCylinder1
+    400080: pasted__pasted__pCylinder1 1
+    400082: pasted__pasted__pCylinder1 2
+    400084: pasted__pasted__pCylinder1 3
+    400086: pasted__pasted__pCylinder1 4
+    400088: pasted__pasted__pCylinder1 5
+    400090: pasted__pasted__pCylinder1 6
+    400092: //RootNode
+    400094: Stem
+    2300000: Leaf1
+    2300002: Leaf2
+    2300004: Leaf3
+    2300006: Leaf4
+    2300008: Leaf5
+    2300010: Leaf6
+    2300012: pasted__pasted__pasted__pSphere1
+    2300014: pasted__pasted__pasted__pSphere1 1
+    2300016: pasted__pasted__pasted__pSphere1 2
+    2300018: pasted__pasted__pasted__pSphere1 3
+    2300020: pasted__pasted__pasted__pSphere1 4
+    2300022: pasted__pasted__pasted__pSphere1 5
+    2300024: pasted__pasted__pasted__pSphere1 6
+    2300026: pasted__pasted__pCylinder1
+    2300028: pasted__pasted__pCylinder1 1
+    2300030: pasted__pasted__pCylinder1 2
+    2300032: pasted__pasted__pCylinder1 3
+    2300034: pasted__pasted__pCylinder1 4
+    2300036: pasted__pasted__pCylinder1 5
+    2300038: pasted__pasted__pCylinder1 6
+    3300000: Leaf1
+    3300002: Leaf2
+    3300004: Leaf3
+    3300006: Leaf4
+    3300008: Leaf5
+    3300010: Leaf6
+    3300012: pasted__pasted__pasted__pSphere1
+    3300014: pasted__pasted__pasted__pSphere1 1
+    3300016: pasted__pasted__pasted__pSphere1 2
+    3300018: pasted__pasted__pasted__pSphere1 3
+    3300020: pasted__pasted__pasted__pSphere1 4
+    3300022: pasted__pasted__pasted__pSphere1 5
+    3300024: pasted__pasted__pasted__pSphere1 6
+    3300026: pasted__pasted__pCylinder1
+    3300028: pasted__pasted__pCylinder1 1
+    3300030: pasted__pasted__pCylinder1 2
+    3300032: pasted__pasted__pCylinder1 3
+    3300034: pasted__pasted__pCylinder1 4
+    3300036: pasted__pasted__pCylinder1 5
+    3300038: pasted__pasted__pCylinder1 6
+    4300000: pasted__pasted__pasted__pSphere1
+    4300002: pasted__pasted__pasted__pSphere1
+    4300004: pasted__pasted__pasted__pSphere1
+    4300006: pasted__pasted__pasted__pSphere1
+    4300008: pasted__pasted__pasted__pSphere1
+    4300010: pasted__pasted__pasted__pSphere1
+    4300012: pasted__pasted__pasted__pSphere1
+    4300014: pasted__pasted__pCylinder1
+    4300016: pasted__pasted__pCylinder1
+    4300018: pasted__pasted__pCylinder1
+    4300020: pasted__pasted__pCylinder1
+    4300022: pasted__pasted__pCylinder1
+    4300024: pasted__pasted__pCylinder1
+    4300026: pasted__pasted__pCylinder1
+    4300028: Leaf1
+    4300030: Leaf2
+    4300032: Leaf3
+    4300034: Leaf4
+    4300036: Leaf5
+    4300038: Leaf6
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
