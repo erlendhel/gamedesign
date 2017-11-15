@@ -24,28 +24,28 @@ public class ActionController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Input.GetKeyDown("1") && PlayerInventory.hasMinimizer == true) {
+        if (Input.GetKeyDown("1") && PlayerInventory.hasMinimizer) {
             ActivateMinimizer();
             GUIController.guiController.minimizerButton.interactable = false;
-        } else if (Input.GetKeyDown("2") && PlayerInventory.hasMaximizer == true) {
+        } else if (Input.GetKeyDown("2") && PlayerInventory.hasMaximizer) {
             ActivateMaximizer();
             GUIController.guiController.maximizerButton.interactable = false;
-        } else if (Input.GetKeyDown("3") && PlayerInventory.hasDecreaseGrav == true) {
+        } else if (Input.GetKeyDown("3") && PlayerInventory.hasDecreaseGrav) {
             ActivateDecreaseGrav();
             GUIController.guiController.decreaseGravButton.interactable = false;
-        } else if (Input.GetKeyDown("4") && PlayerInventory.hasIncreaseGrav == true) {
+        } else if (Input.GetKeyDown("4") && PlayerInventory.hasIncreaseGrav) {
             ActivateIncreaseGrav();
             GUIController.guiController.increaseGravButton.interactable = false;
-        } else if (Input.GetKeyDown("5") && PlayerInventory.hasTimeBasedSpeed == true) {
+        } else if (Input.GetKeyDown("5") && PlayerInventory.hasTimeBasedSpeed) {
             ActivateTimeSpeed();
             GUIController.guiController.timedSpeedButton.interactable = false;
-        } else if (Input.GetKeyDown("6") && PlayerInventory.hasInstantSpeed == true) {
+        } else if (Input.GetKeyDown("6") && PlayerInventory.hasInstantSpeed) {
             ActivateInstantSpeed();
             GUIController.guiController.instantSpeedButton.interactable = false;
-        } else if (Input.GetKeyDown("7") && PlayerInventory.hasTimeBasedJump == true) {
+        } else if (Input.GetKeyDown("7") && PlayerInventory.hasTimeBasedJump) {
             ActivateTimeJump();
             GUIController.guiController.timedJumpButton.interactable = false;
-        } else if (Input.GetKeyDown("8") && PlayerInventory.hasInstantJump == true) {
+        } else if (Input.GetKeyDown("8") && PlayerInventory.hasInstantJump) {
             ActivateInstantJump();
             GUIController.guiController.instantJumpButton.interactable = false;
         }
