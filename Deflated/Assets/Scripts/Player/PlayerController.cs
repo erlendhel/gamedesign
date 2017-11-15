@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour {
     public float jumpSpeed = 500.0f;
     public float vel;
 
+    public bool swinging = false;
+    int swingForce = 25;
+
     // Default values of game character
     public float initMass;
     public Vector3 initScale;
@@ -40,6 +43,9 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown("space") && isGrounded) {
             Jump();
+        }
+        if (Input.GetKeyDown("space") && swinging) {
+            Destroy(GetComponent<HingeJoint>());
         }
     }
 
@@ -107,6 +113,9 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.CompareTag("BouncyMat")) {
             rb.AddForce(Vector3.up * 1400);
         }
+        if (collision.gameObject.CompareTag("Rope")) {
+            swinging = false;
+        }
     }
 
     // Function to detect if the game character is off the ground
@@ -115,6 +124,16 @@ public class PlayerController : MonoBehaviour {
             isGrounded = false;
         } else if (collision.gameObject.CompareTag("Water")) {
             inWater = false;
+        } else if (collision.gameObject.tag == "Rope") {
+
+            swinging = true;
+
+            //add a hingejoint to our player
+            HingeJoint hinge = gameObject.AddComponent<HingeJoint>() as HingeJoint;
+            //telling the hingejoint what to connet to
+            hinge.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+
+            // GetComponent<SphereCollider>().enable = false;
         }
     }
 
