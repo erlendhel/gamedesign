@@ -735,7 +735,7 @@ MonoBehaviour:
   inWater: 0
   rb: {fileID: 150696593}
   speed: 50
-  jumpSpeed: 1000
+  jumpSpeed: 10000
   vel: 0
   initMass: 0
   initScale: {x: 0, y: 0, z: 0}
