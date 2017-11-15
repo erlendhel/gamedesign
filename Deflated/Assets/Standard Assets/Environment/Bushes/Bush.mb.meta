@@ -1,0 +1,313 @@
+fileFormatVersion: 2
+guid: bbc3a174f1e435449bae1306e22e982e
+timeCreated: 1510337135
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Item
+    100004: Item1
+    100006: Item11
+    100008: Item12
+    100010: Item13
+    100012: Item14
+    100014: Item15
+    100016: Item16
+    100018: Item17
+    100020: Item18
+    100022: Item19
+    100024: Item2
+    100026: Item20
+    100028: Item3
+    100030: Item4
+    100032: Item5
+    100034: Item7
+    100036: Item8
+    100038: Item9
+    100040: Leaf
+    100042: Leaf 1
+    100044: Leaf 10
+    100046: Leaf 11
+    100048: Leaf 12
+    100050: Leaf 13
+    100052: Leaf 14
+    100054: Leaf 15
+    100056: Leaf 2
+    100058: Leaf 3
+    100060: Leaf 4
+    100062: Leaf 5
+    100064: Leaf 6
+    100066: Leaf 7
+    100068: Leaf 8
+    100070: Leaf 9
+    100072: pasted__Leaf
+    100074: pasted__Leaf 1
+    100076: pasted__pasted__Leaf
+    100078: pasted__pasted__Stem
+    100080: pasted__Stem
+    100082: pasted__Stem 1
+    100084: Stem
+    100086: Stem 1
+    100088: Stem 10
+    100090: Stem 11
+    100092: Stem 12
+    100094: Stem 13
+    100096: Stem 14
+    100098: Stem 15
+    100100: Stem 2
+    100102: Stem 3
+    100104: Stem 4
+    100106: Stem 5
+    100108: Stem 6
+    100110: Stem 7
+    100112: Stem 8
+    100114: Stem 9
+    400000: //RootNode
+    400002: Item
+    400004: Item1
+    400006: Item11
+    400008: Item12
+    400010: Item13
+    400012: Item14
+    400014: Item15
+    400016: Item16
+    400018: Item17
+    400020: Item18
+    400022: Item19
+    400024: Item2
+    400026: Item20
+    400028: Item3
+    400030: Item4
+    400032: Item5
+    400034: Item7
+    400036: Item8
+    400038: Item9
+    400040: Leaf
+    400042: Leaf 1
+    400044: Leaf 10
+    400046: Leaf 11
+    400048: Leaf 12
+    400050: Leaf 13
+    400052: Leaf 14
+    400054: Leaf 15
+    400056: Leaf 2
+    400058: Leaf 3
+    400060: Leaf 4
+    400062: Leaf 5
+    400064: Leaf 6
+    400066: Leaf 7
+    400068: Leaf 8
+    400070: Leaf 9
+    400072: pasted__Leaf
+    400074: pasted__Leaf 1
+    400076: pasted__pasted__Leaf
+    400078: pasted__pasted__Stem
+    400080: pasted__Stem
+    400082: pasted__Stem 1
+    400084: Stem
+    400086: Stem 1
+    400088: Stem 10
+    400090: Stem 11
+    400092: Stem 12
+    400094: Stem 13
+    400096: Stem 14
+    400098: Stem 15
+    400100: Stem 2
+    400102: Stem 3
+    400104: Stem 4
+    400106: Stem 5
+    400108: Stem 6
+    400110: Stem 7
+    400112: Stem 8
+    400114: Stem 9
+    2300000: Leaf
+    2300002: Leaf 1
+    2300004: Leaf 10
+    2300006: Leaf 11
+    2300008: Leaf 12
+    2300010: Leaf 13
+    2300012: Leaf 14
+    2300014: Leaf 15
+    2300016: Leaf 2
+    2300018: Leaf 3
+    2300020: Leaf 4
+    2300022: Leaf 5
+    2300024: Leaf 6
+    2300026: Leaf 7
+    2300028: Leaf 8
+    2300030: Leaf 9
+    2300032: pasted__Leaf
+    2300034: pasted__Leaf 1
+    2300036: pasted__pasted__Leaf
+    2300038: pasted__pasted__Stem
+    2300040: pasted__Stem
+    2300042: pasted__Stem 1
+    2300044: Stem
+    2300046: Stem 1
+    2300048: Stem 10
+    2300050: Stem 11
+    2300052: Stem 12
+    2300054: Stem 13
+    2300056: Stem 14
+    2300058: Stem 15
+    2300060: Stem 2
+    2300062: Stem 3
+    2300064: Stem 4
+    2300066: Stem 5
+    2300068: Stem 6
+    2300070: Stem 7
+    2300072: Stem 8
+    2300074: Stem 9
+    3300000: Leaf
+    3300002: Leaf 1
+    3300004: Leaf 10
+    3300006: Leaf 11
+    3300008: Leaf 12
+    3300010: Leaf 13
+    3300012: Leaf 14
+    3300014: Leaf 15
+    3300016: Leaf 2
+    3300018: Leaf 3
+    3300020: Leaf 4
+    3300022: Leaf 5
+    3300024: Leaf 6
+    3300026: Leaf 7
+    3300028: Leaf 8
+    3300030: Leaf 9
+    3300032: pasted__Leaf
+    3300034: pasted__Leaf 1
+    3300036: pasted__pasted__Leaf
+    3300038: pasted__pasted__Stem
+    3300040: pasted__Stem
+    3300042: pasted__Stem 1
+    3300044: Stem
+    3300046: Stem 1
+    3300048: Stem 10
+    3300050: Stem 11
+    3300052: Stem 12
+    3300054: Stem 13
+    3300056: Stem 14
+    3300058: Stem 15
+    3300060: Stem 2
+    3300062: Stem 3
+    3300064: Stem 4
+    3300066: Stem 5
+    3300068: Stem 6
+    3300070: Stem 7
+    3300072: Stem 8
+    3300074: Stem 9
+    4300000: Stem
+    4300002: Leaf
+    4300004: Stem
+    4300006: Leaf
+    4300008: Stem
+    4300010: Leaf
+    4300012: pasted__Stem
+    4300014: pasted__Leaf
+    4300016: pasted__pasted__Stem
+    4300018: pasted__pasted__Leaf
+    4300020: Stem
+    4300022: Leaf
+    4300024: Stem
+    4300026: Leaf
+    4300028: pasted__Stem
+    4300030: pasted__Leaf
+    4300032: Stem
+    4300034: Leaf
+    4300036: Stem
+    4300038: Leaf
+    4300040: Stem
+    4300042: Leaf
+    4300044: Stem
+    4300046: Leaf
+    4300048: Stem
+    4300050: Leaf
+    4300052: Stem
+    4300054: Leaf
+    4300056: Stem
+    4300058: Leaf
+    4300060: Stem
+    4300062: Leaf
+    4300064: Stem
+    4300066: Leaf
+    4300068: Stem
+    4300070: Leaf
+    4300072: Stem
+    4300074: Leaf
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
