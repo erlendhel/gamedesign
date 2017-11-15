@@ -5,6 +5,7 @@ using UnityEngine;
 public class ActionController : MonoBehaviour {
 
     PlayerController playerController;
+    
 
     // Variables indicating if pickups have been activated
     private bool minimizerActive, maximizerActive, increaseGravActive, decreaseGravActive,
@@ -14,12 +15,13 @@ public class ActionController : MonoBehaviour {
     private Vector3 increaseGrav = new Vector3(0, -20.0f, 0);
 
     //The power of the instant speed pickup
-    private float instantSpeedPower = 5000f;
+    private float instantSpeedPower = 3000f;
 
     private int pickupDuration = 5;
 
     private void Start() {
         playerController = GetComponent<PlayerController>();
+
     }
 
     // Update is called once per frame
@@ -49,6 +51,7 @@ public class ActionController : MonoBehaviour {
             ActivateInstantJump();
             GUIController.guiController.instantJumpButton.interactable = false;
         }
+       
     }
 
     // Function that activates the minimizer-pickup
@@ -120,6 +123,8 @@ public class ActionController : MonoBehaviour {
         //Set the movement to where the camera z-axis is pointing
         Vector3 movement = new Vector3(0, 0, 1);
         movement = Camera.main.transform.TransformDirection(movement);
+        movement.y = 0f;
+        movement = Vector3.Normalize(movement);
 
         playerController.rb.AddForce(movement * instantSpeedPower);
         PlayerInventory.hasInstantSpeed = false;
