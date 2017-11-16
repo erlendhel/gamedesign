@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonHandler : MonoBehaviour {
 
-    private bool isPressed = false;
+    public bool isPressed = false;
     private Animator anim;
 
     private void Start() {
