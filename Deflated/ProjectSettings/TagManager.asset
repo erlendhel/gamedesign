@@ -27,6 +27,9 @@ TagManager:
   - FirstKeyPart
   - MultiKeyPartsLock
   - Water
+  - YellowButton
+  - BlueButton
+  - GreenButton
   layers:
   - Default
   - TransparentFX
