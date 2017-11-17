@@ -1,64 +1,22 @@
 fileFormatVersion: 2
-guid: 41166a6858a34524ea2601e095a4edcc
-timeCreated: 1510768588
+guid: 454a2f13099c5bd4ead3f300705ce4ca
+timeCreated: 1510751240
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: Bar
-    100002: Bar1
-    100004: Bar2
-    100006: Bar3
-    100008: Bar4
-    100010: Bar5
-    100012: Bar6
-    100014: Bar7
-    100016: IronBarDoor
-    100018: Island
-    100020: Lift
-    100022: //RootNode
-    400000: Bar
-    400002: Bar1
-    400004: Bar2
-    400006: Bar3
-    400008: Bar4
-    400010: Bar5
-    400012: Bar6
-    400014: Bar7
-    400016: IronBarDoor
-    400018: Island
-    400020: Lift
-    400022: //RootNode
-    2300000: Bar
-    2300002: Bar1
-    2300004: Bar2
-    2300006: Bar3
-    2300008: Bar4
-    2300010: Bar5
-    2300012: Bar6
-    2300014: Bar7
-    2300016: Island
-    2300018: Lift
-    3300000: Bar
-    3300002: Bar1
-    3300004: Bar2
-    3300006: Bar3
-    3300008: Bar4
-    3300010: Bar5
-    3300012: Bar6
-    3300014: Bar7
-    3300016: Island
-    3300018: Lift
-    4300000: Island
-    4300002: Lift
-    4300004: Bar
-    4300006: Bar1
-    4300008: Bar2
-    4300010: Bar3
-    4300012: Bar4
-    4300014: Bar5
-    4300016: Bar6
-    4300018: Bar7
+    100000: //RootNode
+    100002: pPyramid2
+    100004: Terrain:Mesh
+    400000: //RootNode
+    400002: pPyramid2
+    400004: Terrain:Mesh
+    2300000: pPyramid2
+    2300002: Terrain:Mesh
+    3300000: pPyramid2
+    3300002: Terrain:Mesh
+    4300000: Terrain:Mesh
+    4300002: pPyramid2
     9500000: //RootNode
   materials:
     importMaterials: 1

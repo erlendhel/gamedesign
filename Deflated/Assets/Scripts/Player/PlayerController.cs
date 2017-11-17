@@ -125,15 +125,15 @@ public class PlayerController : MonoBehaviour {
         } else if (collision.gameObject.CompareTag("Water")) {
             inWater = false;
         } else if (collision.gameObject.tag == "Rope") {
-
             swinging = true;
 
-            //add a hingejoint to our player
+            // Add a hingejoint to our player
             HingeJoint hinge = gameObject.AddComponent<HingeJoint>() as HingeJoint;
-            //telling the hingejoint what to connet to
+            // Telling the hingejoint what to connet to
             hinge.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+            hinge.connectedAnchor = new Vector3(0f, -0.9f,0f);
 
-            // GetComponent<SphereCollider>().enable = false;
+            
         }
     }
 

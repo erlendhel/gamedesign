@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ButtonHandler : MonoBehaviour {
 
-    private bool isPressed = false;
-    private Animator anim;
+    public bool isPressed = false;
+    public Animator anim;
 
     private void Start() {
         anim = GetComponent<Animator>();

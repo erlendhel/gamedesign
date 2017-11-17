@@ -1,64 +1,42 @@
 fileFormatVersion: 2
-guid: 41166a6858a34524ea2601e095a4edcc
-timeCreated: 1510768588
+guid: 76f78fe57f1a2364081aae774c5158d4
+timeCreated: 1510867103
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: Bar
-    100002: Bar1
-    100004: Bar2
-    100006: Bar3
-    100008: Bar4
-    100010: Bar5
-    100012: Bar6
-    100014: Bar7
-    100016: IronBarDoor
-    100018: Island
-    100020: Lift
-    100022: //RootNode
-    400000: Bar
-    400002: Bar1
-    400004: Bar2
-    400006: Bar3
-    400008: Bar4
-    400010: Bar5
-    400012: Bar6
-    400014: Bar7
-    400016: IronBarDoor
-    400018: Island
-    400020: Lift
-    400022: //RootNode
-    2300000: Bar
-    2300002: Bar1
-    2300004: Bar2
-    2300006: Bar3
-    2300008: Bar4
-    2300010: Bar5
-    2300012: Bar6
-    2300014: Bar7
-    2300016: Island
-    2300018: Lift
-    3300000: Bar
-    3300002: Bar1
-    3300004: Bar2
-    3300006: Bar3
-    3300008: Bar4
-    3300010: Bar5
-    3300012: Bar6
-    3300014: Bar7
-    3300016: Island
-    3300018: Lift
-    4300000: Island
-    4300002: Lift
-    4300004: Bar
-    4300006: Bar1
-    4300008: Bar2
-    4300010: Bar3
-    4300012: Bar4
-    4300014: Bar5
-    4300016: Bar6
-    4300018: Bar7
+    100000: Branch
+    100002: Branch1
+    100004: Branch2
+    100006: Branch3
+    100008: Branch4
+    100010: MainStem
+    100012: //RootNode
+    400000: Branch
+    400002: Branch1
+    400004: Branch2
+    400006: Branch3
+    400008: Branch4
+    400010: MainStem
+    400012: //RootNode
+    2300000: Branch
+    2300002: Branch1
+    2300004: Branch2
+    2300006: Branch3
+    2300008: Branch4
+    2300010: MainStem
+    3300000: Branch
+    3300002: Branch1
+    3300004: Branch2
+    3300006: Branch3
+    3300008: Branch4
+    3300010: MainStem
+    4300000: MainStem
+    4300002: Branch
+    4300004: Branch1
+    4300006: Branch2
+    4300008: Branch3
+    4300010: Branch4
     9500000: //RootNode
   materials:
     importMaterials: 1
