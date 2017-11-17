@@ -2338,15 +2338,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.7
+      value: 24.700003
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.918777
+      value: -15.918775
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.98883
+      value: -17.988827
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2379,6 +2379,18 @@ Prefab:
     - target: {fileID: 100002, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_TagString
       value: GreenButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
@@ -2771,10 +2783,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e4d4325dbd5a0428e3a2e5329393dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ironBarDoor: {fileID: 14777895}
   yellowButton: {fileID: 854944912}
   greenButton: {fileID: 1404902480}
   blueButton: {fileID: 2060800435}
+  ironBarDoor: {fileID: 0}
+  combination: 
+  combinationArray: 
+  checkString: 
 --- !u!1 &666731111
 GameObject:
   m_ObjectHideFlags: 0
@@ -3813,6 +3828,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &854944918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 854944912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7022b0aa289bb99468526cc36fedc291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPressed: 0
+  anim: {fileID: 0}
 --- !u!1001 &857999761
 Prefab:
   m_ObjectHideFlags: 0
@@ -4271,6 +4299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPressed: 0
+  anim: {fileID: 0}
 --- !u!1001 &933680822
 Prefab:
   m_ObjectHideFlags: 0
@@ -5981,15 +6010,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.277206
+      value: 18.277203
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.307816
+      value: -16.307817
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.467285
+      value: -18.467281
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6022,6 +6051,18 @@ Prefab:
     - target: {fileID: 100002, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_TagString
       value: YellowButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
@@ -6730,6 +6771,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1404902486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1404902480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7022b0aa289bb99468526cc36fedc291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPressed: 0
+  anim: {fileID: 0}
 --- !u!1001 &1411761728
 Prefab:
   m_ObjectHideFlags: 0
@@ -7193,15 +7247,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.556335
+      value: 30.55634
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.288315
+      value: -16.288311
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.91983
+      value: -18.919823
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_LocalRotation.x
@@ -7234,6 +7288,18 @@ Prefab:
     - target: {fileID: 100002, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
       propertyPath: m_TagString
       value: BlueButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0de73fd2d63d885438bcedf947a17841, type: 3}
@@ -9410,6 +9476,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &2060800441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2060800435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7022b0aa289bb99468526cc36fedc291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPressed: 0
+  anim: {fileID: 0}
 --- !u!1001 &2064675047
 Prefab:
   m_ObjectHideFlags: 0

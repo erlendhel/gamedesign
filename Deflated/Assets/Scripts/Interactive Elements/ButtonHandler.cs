@@ -5,7 +5,7 @@ using UnityEngine;
 public class ButtonHandler : MonoBehaviour {
 
     public bool isPressed = false;
-    private Animator anim;
+    public Animator anim;
 
     private void Start() {
         anim = GetComponent<Animator>();
