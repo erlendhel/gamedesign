@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/**
+ *  Class controlling the movement of a player in the game.  
+ **/
 public class PlayerController : MonoBehaviour {
 
     public bool isGrounded = true;
@@ -11,6 +13,7 @@ public class PlayerController : MonoBehaviour {
     public float speed = 15f;
     public float jumpSpeed = 500.0f;
     public float vel;
+    public float verticalVel;
 
     public bool swinging = false;
     int swingForce = 25;
@@ -40,6 +43,7 @@ public class PlayerController : MonoBehaviour {
     private void Update() {
 
         vel = rb.velocity.magnitude;
+        verticalVel = rb.velocity.y;
 
         if (Input.GetKeyDown("space") && isGrounded) {
             Jump();
@@ -141,8 +145,7 @@ public class PlayerController : MonoBehaviour {
         return spawnPosition;
     }
 
-    public bool IsGrounded()
-    {
+    public bool IsGrounded() {
         return isGrounded;
     }
 }
