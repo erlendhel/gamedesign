@@ -10,17 +10,15 @@ public class Door : MonoBehaviour {
     private bool isMoving = false;
     private Rigidbody bucketRigidBody;
 
-	// Use this for initialization
 	void Start ()
     {
         lastBucketY = bucket.transform.position.y;
         bucketRigidBody = bucket.gameObject.GetComponent<Rigidbody>();
-
     }
 	
-	// Update is called once per frame
-	void Update ()
+	void Update()
     {
+        // Keep track of the bucket position
         float currentBucketY = bucket.transform.position.y;
         float yToTranslate = (currentBucketY - lastBucketY) * -1;
         
@@ -37,6 +35,7 @@ public class Door : MonoBehaviour {
         else if (!isMoving && AudioManager.instance.IsPlaying("PulleyOperating"))
             AudioManager.instance.Stop("PulleyOperating");
 
+        //Translate the door by how much the bucket have moved since last update
         transform.Translate(0, yToTranslate, 0);
         lastBucketY = bucket.transform.position.y;
     }
