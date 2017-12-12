@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class AirBubbleHandler : MonoBehaviour {
 
-    private SphereCollider collider;
+    private Collider collider;
     private MeshRenderer renderer;
     private float respawnTime = 30f;
 
 	// Use this for initialization
 	void Start () {
-        collider = GetComponent<SphereCollider>();
+        collider = GetComponent<Collider>();
         renderer = GetComponent<MeshRenderer>();
 	}
 

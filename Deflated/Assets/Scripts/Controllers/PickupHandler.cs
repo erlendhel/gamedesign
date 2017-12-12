@@ -11,7 +11,6 @@ public class PickupHandler : MonoBehaviour {
     private void Start(){
         collider = GetComponent<Collider>();
         renderers = GetComponentsInChildren<MeshRenderer>();
-        print(renderers.Length);
     }
 
     private void OnTriggerEnter(Collider other) {
