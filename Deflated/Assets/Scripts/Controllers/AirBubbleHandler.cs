@@ -8,8 +8,8 @@ public class AirBubbleHandler : MonoBehaviour {
     private MeshRenderer renderer;
     private float respawnTime = 30f;
 
-	// Use this for initialization
 	void Start () {
+        // Get components used to disable air bubbles
         collider = GetComponent<Collider>();
         renderer = GetComponent<MeshRenderer>();
 	}

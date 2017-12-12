@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 20c202e367d635240ac7d7e9dd5b038d
+timeCreated: 1513088401
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Cartoon Relief
+  fontNames:
+  - Cartoon Relief
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
