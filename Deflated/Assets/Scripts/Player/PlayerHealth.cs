@@ -69,7 +69,7 @@ public class PlayerHealth : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision) {
         float fallDamage = playerController.verticalVel;
-        if (collision.gameObject.CompareTag("Terrain") && fallDamage <= -20.0f) {
+        if (collision.gameObject.CompareTag("Terrain") && fallDamage <= -200.0f) {
             print("Fall damage");
             currentHealth += fallDamage / 1.5f;
         }

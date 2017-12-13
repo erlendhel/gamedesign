@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     public bool isGrounded = true;
     public bool inWater = false;
     public Rigidbody rb;
+    public Animator teleAnim;
 
     public float speed = 15f;
     public float jumpSpeed = 500.0f;
@@ -33,6 +34,8 @@ public class PlayerController : MonoBehaviour {
     private void Start() {
         rb = GetComponent<Rigidbody>();
         CurrencyManager.currencyManager.Load();
+        teleAnim = GetComponent<Animator>();
+        teleAnim.enabled = false;
         initScale = transform.localScale;
         initMass = rb.mass;
         spawnPosition = rb.position;

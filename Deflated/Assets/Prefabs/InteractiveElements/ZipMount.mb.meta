@@ -1,57 +1,27 @@
 fileFormatVersion: 2
-guid: cb4e8fb2b2de98b41a22b2ecd6d6d3fa
-timeCreated: 1509300801
+guid: fbbf6b6fb4629de41afe0d4c60e99188
+timeCreated: 1513099677
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: MainIsland
-    100004: pPlane1
-    100006: Rock1
-    100008: Rock2
-    100010: Rock3
-    100012: Rock4
-    100014: TreeHead1
-    100016: TreeHead2
-    100018: TreeMainTrunk
-    400000: //RootNode
-    400002: MainIsland
-    400004: pPlane1
-    400006: Rock1
-    400008: Rock2
-    400010: Rock3
-    400012: Rock4
-    400014: TreeHead1
-    400016: TreeHead2
-    400018: TreeMainTrunk
-    2300000: MainIsland
-    2300002: pPlane1
-    2300004: Rock1
-    2300006: Rock2
-    2300008: Rock3
-    2300010: Rock4
-    2300012: TreeHead1
-    2300014: TreeHead2
-    2300016: TreeMainTrunk
-    3300000: MainIsland
-    3300002: pPlane1
-    3300004: Rock1
-    3300006: Rock2
-    3300008: Rock3
-    3300010: Rock4
-    3300012: TreeHead1
-    3300014: TreeHead2
-    3300016: TreeMainTrunk
-    4300000: MainIsland
-    4300002: Rock4
-    4300004: Rock3
-    4300006: Rock2
-    4300008: Rock1
-    4300010: TreeMainTrunk
-    4300012: TreeHead1
-    4300014: TreeHead2
-    4300016: pPlane1
+    100000: SideLog
+    100002: SideLog1
+    100004: TopLog
+    100006: //RootNode
+    400000: SideLog
+    400002: SideLog1
+    400004: TopLog
+    400006: //RootNode
+    2300000: SideLog
+    2300002: SideLog1
+    2300004: TopLog
+    3300000: SideLog
+    3300002: SideLog1
+    3300004: TopLog
+    4300000: SideLog1
+    4300002: SideLog
+    4300004: TopLog
     9500000: //RootNode
   materials:
     importMaterials: 1

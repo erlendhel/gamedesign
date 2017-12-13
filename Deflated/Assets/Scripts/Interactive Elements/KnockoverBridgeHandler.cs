@@ -8,7 +8,6 @@ public class KnockoverBridgeHandler : MonoBehaviour {
     public GameObject player;
     public PlayerController playerController;
     private bool isActive = false;
-    public float playerVelocity;
     public float collisionForce;
 
 	// Use this for initialization
@@ -18,14 +17,9 @@ public class KnockoverBridgeHandler : MonoBehaviour {
         anim.enabled = false;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-        playerVelocity = playerController.vel;
-	}
-
     private void OnCollisionEnter(Collision player) {
-        collisionForce = (playerController.rb.mass * (Mathf.Pow(playerVelocity, 2))) / 2;
-        if (player.gameObject.CompareTag("Player") && !isActive && collisionForce >= 2000.0f) {
+        collisionForce = (playerController.rb.mass * (Mathf.Pow(playerController.vel, 2))) / 2;
+        if (player.gameObject.CompareTag("Player") && !isActive && collisionForce >= 3500.0f) {
             anim.enabled = true;
         }
     }
