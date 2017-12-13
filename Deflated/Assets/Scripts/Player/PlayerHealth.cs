@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour {
     PlayerController playerController;
     public static PlayerHealth playerHealth;
 
-    private float initialHealth = 20f;
+    private float initialHealth = 100f;
     private float healthDecrease = 1.0f;
     public float currentHealth;
 
