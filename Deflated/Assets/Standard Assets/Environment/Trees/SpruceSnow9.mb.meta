@@ -1,0 +1,724 @@
+fileFormatVersion: 2
+guid: 8117dee63d9ade44f84a7da3c2427beb
+timeCreated: 1512023133
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Bottom
+    100002: Leaf
+    100004: Leaf 1
+    100006: Leaf 10
+    100008: Leaf 11
+    100010: Leaf 12
+    100012: Leaf 13
+    100014: Leaf 14
+    100016: Leaf 15
+    100018: Leaf 16
+    100020: Leaf 17
+    100022: Leaf 18
+    100024: Leaf 19
+    100026: Leaf 2
+    100028: Leaf 20
+    100030: Leaf 21
+    100032: Leaf 22
+    100034: Leaf 23
+    100036: Leaf 24
+    100038: Leaf 25
+    100040: Leaf 26
+    100042: Leaf 27
+    100044: Leaf 28
+    100046: Leaf 29
+    100048: Leaf 3
+    100050: Leaf 30
+    100052: Leaf 31
+    100054: Leaf 32
+    100056: Leaf 33
+    100058: Leaf 34
+    100060: Leaf 35
+    100062: Leaf 36
+    100064: Leaf 37
+    100066: Leaf 38
+    100068: Leaf 39
+    100070: Leaf 4
+    100072: Leaf 5
+    100074: Leaf 6
+    100076: Leaf 7
+    100078: Leaf 8
+    100080: Leaf 9
+    100082: Middle1
+    100084: Middle2
+    100086: MiddleLeaf
+    100088: MiddleLeaf 1
+    100090: MiddleLeaf 10
+    100092: MiddleLeaf 11
+    100094: MiddleLeaf 12
+    100096: MiddleLeaf 13
+    100098: MiddleLeaf 14
+    100100: MiddleLeaf 15
+    100102: MiddleLeaf 2
+    100104: MiddleLeaf 3
+    100106: MiddleLeaf 4
+    100108: MiddleLeaf 5
+    100110: MiddleLeaf 6
+    100112: MiddleLeaf 7
+    100114: MiddleLeaf 8
+    100116: MiddleLeaf 9
+    100118: pCube1
+    100120: pCube1 1
+    100122: pCube10
+    100124: pCube10 1
+    100126: pCube11
+    100128: pCube11 1
+    100130: pCube12
+    100132: pCube12 1
+    100134: pCube13
+    100136: pCube13 1
+    100138: pCube14
+    100140: pCube14 1
+    100142: pCube15
+    100144: pCube15 1
+    100146: pCube16
+    100148: pCube16 1
+    100150: pCube17
+    100152: pCube17 1
+    100154: pCube18
+    100156: pCube18 1
+    100158: pCube19
+    100160: pCube19 1
+    100162: pCube2
+    100164: pCube2 1
+    100166: pCube20
+    100168: pCube20 1
+    100170: pCube21
+    100172: pCube21 1
+    100174: pCube3
+    100176: pCube3 1
+    100178: pCube4
+    100180: pCube4 1
+    100182: pCube5
+    100184: pCube5 1
+    100186: pCube6
+    100188: pCube6 1
+    100190: pCube7
+    100192: pCube7 1
+    100194: pCube8
+    100196: pCube8 1
+    100198: pCube9
+    100200: pCube9 1
+    100202: polySurface1
+    100204: polySurface1 1
+    100206: polySurface4
+    100208: polySurface4 1
+    100210: Snow
+    100212: Snow 1
+    100214: Snow 10
+    100216: Snow 11
+    100218: Snow 12
+    100220: Snow 13
+    100222: Snow 14
+    100224: Snow 15
+    100226: Snow 16
+    100228: Snow 17
+    100230: Snow 18
+    100232: Snow 19
+    100234: Snow 2
+    100236: Snow 20
+    100238: Snow 21
+    100240: Snow 22
+    100242: Snow 23
+    100244: Snow 24
+    100246: Snow 25
+    100248: Snow 26
+    100250: Snow 27
+    100252: Snow 28
+    100254: Snow 29
+    100256: Snow 3
+    100258: Snow 30
+    100260: Snow 31
+    100262: Snow 32
+    100264: Snow 33
+    100266: Snow 34
+    100268: Snow 35
+    100270: Snow 36
+    100272: Snow 37
+    100274: Snow 38
+    100276: Snow 39
+    100278: Snow 4
+    100280: Snow 40
+    100282: Snow 41
+    100284: Snow 42
+    100286: Snow 43
+    100288: Snow 5
+    100290: Snow 6
+    100292: Snow 7
+    100294: Snow 8
+    100296: Snow 9
+    100298: //RootNode
+    100300: Stem
+    100302: Top
+    100304: TopSnow
+    100306: TopSnow 1
+    100308: TopSnow 10
+    100310: TopSnow 11
+    100312: TopSnow 2
+    100314: TopSnow 3
+    100316: TopSnow 4
+    100318: TopSnow 5
+    100320: TopSnow 6
+    100322: TopSnow 7
+    100324: TopSnow 8
+    100326: TopSnow 9
+    100328: TopSnw
+    100330: TopSnw 1
+    400000: Bottom
+    400002: Leaf
+    400004: Leaf 1
+    400006: Leaf 10
+    400008: Leaf 11
+    400010: Leaf 12
+    400012: Leaf 13
+    400014: Leaf 14
+    400016: Leaf 15
+    400018: Leaf 16
+    400020: Leaf 17
+    400022: Leaf 18
+    400024: Leaf 19
+    400026: Leaf 2
+    400028: Leaf 20
+    400030: Leaf 21
+    400032: Leaf 22
+    400034: Leaf 23
+    400036: Leaf 24
+    400038: Leaf 25
+    400040: Leaf 26
+    400042: Leaf 27
+    400044: Leaf 28
+    400046: Leaf 29
+    400048: Leaf 3
+    400050: Leaf 30
+    400052: Leaf 31
+    400054: Leaf 32
+    400056: Leaf 33
+    400058: Leaf 34
+    400060: Leaf 35
+    400062: Leaf 36
+    400064: Leaf 37
+    400066: Leaf 38
+    400068: Leaf 39
+    400070: Leaf 4
+    400072: Leaf 5
+    400074: Leaf 6
+    400076: Leaf 7
+    400078: Leaf 8
+    400080: Leaf 9
+    400082: Middle1
+    400084: Middle2
+    400086: MiddleLeaf
+    400088: MiddleLeaf 1
+    400090: MiddleLeaf 10
+    400092: MiddleLeaf 11
+    400094: MiddleLeaf 12
+    400096: MiddleLeaf 13
+    400098: MiddleLeaf 14
+    400100: MiddleLeaf 15
+    400102: MiddleLeaf 2
+    400104: MiddleLeaf 3
+    400106: MiddleLeaf 4
+    400108: MiddleLeaf 5
+    400110: MiddleLeaf 6
+    400112: MiddleLeaf 7
+    400114: MiddleLeaf 8
+    400116: MiddleLeaf 9
+    400118: pCube1
+    400120: pCube1 1
+    400122: pCube10
+    400124: pCube10 1
+    400126: pCube11
+    400128: pCube11 1
+    400130: pCube12
+    400132: pCube12 1
+    400134: pCube13
+    400136: pCube13 1
+    400138: pCube14
+    400140: pCube14 1
+    400142: pCube15
+    400144: pCube15 1
+    400146: pCube16
+    400148: pCube16 1
+    400150: pCube17
+    400152: pCube17 1
+    400154: pCube18
+    400156: pCube18 1
+    400158: pCube19
+    400160: pCube19 1
+    400162: pCube2
+    400164: pCube2 1
+    400166: pCube20
+    400168: pCube20 1
+    400170: pCube21
+    400172: pCube21 1
+    400174: pCube3
+    400176: pCube3 1
+    400178: pCube4
+    400180: pCube4 1
+    400182: pCube5
+    400184: pCube5 1
+    400186: pCube6
+    400188: pCube6 1
+    400190: pCube7
+    400192: pCube7 1
+    400194: pCube8
+    400196: pCube8 1
+    400198: pCube9
+    400200: pCube9 1
+    400202: polySurface1
+    400204: polySurface1 1
+    400206: polySurface4
+    400208: polySurface4 1
+    400210: Snow
+    400212: Snow 1
+    400214: Snow 10
+    400216: Snow 11
+    400218: Snow 12
+    400220: Snow 13
+    400222: Snow 14
+    400224: Snow 15
+    400226: Snow 16
+    400228: Snow 17
+    400230: Snow 18
+    400232: Snow 19
+    400234: Snow 2
+    400236: Snow 20
+    400238: Snow 21
+    400240: Snow 22
+    400242: Snow 23
+    400244: Snow 24
+    400246: Snow 25
+    400248: Snow 26
+    400250: Snow 27
+    400252: Snow 28
+    400254: Snow 29
+    400256: Snow 3
+    400258: Snow 30
+    400260: Snow 31
+    400262: Snow 32
+    400264: Snow 33
+    400266: Snow 34
+    400268: Snow 35
+    400270: Snow 36
+    400272: Snow 37
+    400274: Snow 38
+    400276: Snow 39
+    400278: Snow 4
+    400280: Snow 40
+    400282: Snow 41
+    400284: Snow 42
+    400286: Snow 43
+    400288: Snow 5
+    400290: Snow 6
+    400292: Snow 7
+    400294: Snow 8
+    400296: Snow 9
+    400298: //RootNode
+    400300: Stem
+    400302: Top
+    400304: TopSnow
+    400306: TopSnow 1
+    400308: TopSnow 10
+    400310: TopSnow 11
+    400312: TopSnow 2
+    400314: TopSnow 3
+    400316: TopSnow 4
+    400318: TopSnow 5
+    400320: TopSnow 6
+    400322: TopSnow 7
+    400324: TopSnow 8
+    400326: TopSnow 9
+    400328: TopSnw
+    400330: TopSnw 1
+    2300000: Leaf
+    2300002: Leaf 1
+    2300004: Leaf 10
+    2300006: Leaf 11
+    2300008: Leaf 2
+    2300010: Leaf 20
+    2300012: Leaf 21
+    2300014: Leaf 22
+    2300016: Leaf 23
+    2300018: Leaf 24
+    2300020: Leaf 25
+    2300022: Leaf 26
+    2300024: Leaf 27
+    2300026: Leaf 28
+    2300028: Leaf 29
+    2300030: Leaf 3
+    2300032: Leaf 30
+    2300034: Leaf 31
+    2300036: Leaf 4
+    2300038: Leaf 5
+    2300040: Leaf 6
+    2300042: Leaf 7
+    2300044: Leaf 8
+    2300046: Leaf 9
+    2300048: MiddleLeaf
+    2300050: MiddleLeaf 1
+    2300052: MiddleLeaf 10
+    2300054: MiddleLeaf 11
+    2300056: MiddleLeaf 12
+    2300058: MiddleLeaf 13
+    2300060: MiddleLeaf 14
+    2300062: MiddleLeaf 15
+    2300064: MiddleLeaf 2
+    2300066: MiddleLeaf 3
+    2300068: MiddleLeaf 4
+    2300070: MiddleLeaf 5
+    2300072: MiddleLeaf 6
+    2300074: MiddleLeaf 7
+    2300076: MiddleLeaf 8
+    2300078: MiddleLeaf 9
+    2300080: polySurface1
+    2300082: polySurface1 1
+    2300084: polySurface4
+    2300086: polySurface4 1
+    2300088: Snow
+    2300090: Snow 1
+    2300092: Snow 10
+    2300094: Snow 11
+    2300096: Snow 12
+    2300098: Snow 13
+    2300100: Snow 14
+    2300102: Snow 15
+    2300104: Snow 16
+    2300106: Snow 17
+    2300108: Snow 18
+    2300110: Snow 19
+    2300112: Snow 2
+    2300114: Snow 20
+    2300116: Snow 21
+    2300118: Snow 22
+    2300120: Snow 23
+    2300122: Snow 24
+    2300124: Snow 25
+    2300126: Snow 26
+    2300128: Snow 27
+    2300130: Snow 28
+    2300132: Snow 29
+    2300134: Snow 3
+    2300136: Snow 30
+    2300138: Snow 31
+    2300140: Snow 32
+    2300142: Snow 33
+    2300144: Snow 34
+    2300146: Snow 35
+    2300148: Snow 36
+    2300150: Snow 37
+    2300152: Snow 38
+    2300154: Snow 39
+    2300156: Snow 4
+    2300158: Snow 40
+    2300160: Snow 41
+    2300162: Snow 42
+    2300164: Snow 43
+    2300166: Snow 5
+    2300168: Snow 6
+    2300170: Snow 7
+    2300172: Snow 8
+    2300174: Snow 9
+    2300176: Stem
+    2300178: TopSnow
+    2300180: TopSnow 1
+    2300182: TopSnow 10
+    2300184: TopSnow 11
+    2300186: TopSnow 2
+    2300188: TopSnow 3
+    2300190: TopSnow 4
+    2300192: TopSnow 5
+    2300194: TopSnow 6
+    2300196: TopSnow 7
+    2300198: TopSnow 8
+    2300200: TopSnow 9
+    2300202: TopSnw
+    2300204: TopSnw 1
+    3300000: Leaf
+    3300002: Leaf 1
+    3300004: Leaf 10
+    3300006: Leaf 11
+    3300008: Leaf 2
+    3300010: Leaf 20
+    3300012: Leaf 21
+    3300014: Leaf 22
+    3300016: Leaf 23
+    3300018: Leaf 24
+    3300020: Leaf 25
+    3300022: Leaf 26
+    3300024: Leaf 27
+    3300026: Leaf 28
+    3300028: Leaf 29
+    3300030: Leaf 3
+    3300032: Leaf 30
+    3300034: Leaf 31
+    3300036: Leaf 4
+    3300038: Leaf 5
+    3300040: Leaf 6
+    3300042: Leaf 7
+    3300044: Leaf 8
+    3300046: Leaf 9
+    3300048: MiddleLeaf
+    3300050: MiddleLeaf 1
+    3300052: MiddleLeaf 10
+    3300054: MiddleLeaf 11
+    3300056: MiddleLeaf 12
+    3300058: MiddleLeaf 13
+    3300060: MiddleLeaf 14
+    3300062: MiddleLeaf 15
+    3300064: MiddleLeaf 2
+    3300066: MiddleLeaf 3
+    3300068: MiddleLeaf 4
+    3300070: MiddleLeaf 5
+    3300072: MiddleLeaf 6
+    3300074: MiddleLeaf 7
+    3300076: MiddleLeaf 8
+    3300078: MiddleLeaf 9
+    3300080: polySurface1
+    3300082: polySurface1 1
+    3300084: polySurface4
+    3300086: polySurface4 1
+    3300088: Snow
+    3300090: Snow 1
+    3300092: Snow 10
+    3300094: Snow 11
+    3300096: Snow 12
+    3300098: Snow 13
+    3300100: Snow 14
+    3300102: Snow 15
+    3300104: Snow 16
+    3300106: Snow 17
+    3300108: Snow 18
+    3300110: Snow 19
+    3300112: Snow 2
+    3300114: Snow 20
+    3300116: Snow 21
+    3300118: Snow 22
+    3300120: Snow 23
+    3300122: Snow 24
+    3300124: Snow 25
+    3300126: Snow 26
+    3300128: Snow 27
+    3300130: Snow 28
+    3300132: Snow 29
+    3300134: Snow 3
+    3300136: Snow 30
+    3300138: Snow 31
+    3300140: Snow 32
+    3300142: Snow 33
+    3300144: Snow 34
+    3300146: Snow 35
+    3300148: Snow 36
+    3300150: Snow 37
+    3300152: Snow 38
+    3300154: Snow 39
+    3300156: Snow 4
+    3300158: Snow 40
+    3300160: Snow 41
+    3300162: Snow 42
+    3300164: Snow 43
+    3300166: Snow 5
+    3300168: Snow 6
+    3300170: Snow 7
+    3300172: Snow 8
+    3300174: Snow 9
+    3300176: Stem
+    3300178: TopSnow
+    3300180: TopSnow 1
+    3300182: TopSnow 10
+    3300184: TopSnow 11
+    3300186: TopSnow 2
+    3300188: TopSnow 3
+    3300190: TopSnow 4
+    3300192: TopSnow 5
+    3300194: TopSnow 6
+    3300196: TopSnow 7
+    3300198: TopSnow 8
+    3300200: TopSnow 9
+    3300202: TopSnw
+    3300204: TopSnw 1
+    4300000: MiddleLeaf
+    4300002: Snow
+    4300004: Snow
+    4300006: MiddleLeaf
+    4300008: TopSnw
+    4300010: Snow
+    4300012: MiddleLeaf
+    4300014: TopSnow
+    4300016: Snow
+    4300018: MiddleLeaf
+    4300020: TopSnow
+    4300022: Snow
+    4300024: MiddleLeaf
+    4300026: TopSnow
+    4300028: Snow
+    4300030: MiddleLeaf
+    4300032: TopSnow
+    4300034: Snow
+    4300036: MiddleLeaf
+    4300038: TopSnow
+    4300040: polySurface4
+    4300042: Snow
+    4300044: MiddleLeaf
+    4300046: TopSnow
+    4300048: Snow
+    4300050: MiddleLeaf
+    4300052: Snow
+    4300054: Snow
+    4300056: MiddleLeaf
+    4300058: TopSnw
+    4300060: Snow
+    4300062: MiddleLeaf
+    4300064: TopSnow
+    4300066: Snow
+    4300068: MiddleLeaf
+    4300070: TopSnow
+    4300072: Snow
+    4300074: MiddleLeaf
+    4300076: TopSnow
+    4300078: Snow
+    4300080: MiddleLeaf
+    4300082: TopSnow
+    4300084: Snow
+    4300086: MiddleLeaf
+    4300088: TopSnow
+    4300090: polySurface4
+    4300092: Snow
+    4300094: MiddleLeaf
+    4300096: TopSnow
+    4300098: Snow
+    4300100: Leaf
+    4300102: Snow
+    4300104: Leaf
+    4300106: Snow
+    4300108: Leaf
+    4300110: Snow
+    4300112: Leaf
+    4300114: Snow
+    4300116: Leaf
+    4300118: Snow
+    4300120: Leaf
+    4300122: Snow
+    4300124: Leaf
+    4300126: Snow
+    4300128: Leaf
+    4300130: Snow
+    4300132: Leaf
+    4300134: Snow
+    4300136: Leaf
+    4300138: Snow
+    4300140: polySurface1
+    4300142: Snow
+    4300144: Leaf
+    4300146: Snow
+    4300148: Leaf
+    4300150: Snow
+    4300152: Leaf
+    4300154: Snow
+    4300156: Leaf
+    4300158: Snow
+    4300160: Leaf
+    4300162: Snow
+    4300164: Leaf
+    4300166: Snow
+    4300168: Leaf
+    4300170: Snow
+    4300172: Leaf
+    4300174: Snow
+    4300176: Leaf
+    4300178: Snow
+    4300180: Leaf
+    4300182: Snow
+    4300184: Leaf
+    4300186: Snow
+    4300188: Leaf
+    4300190: Snow
+    4300192: polySurface1
+    4300194: Snow
+    4300196: Leaf
+    4300198: Snow
+    4300200: Leaf
+    4300202: Snow
+    4300204: Stem
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

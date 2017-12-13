@@ -125,6 +125,16 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        // To prevent bugs where the player sometimes are not able
+        // to jump even though it has collided with a terrian tagged object
+        if (collision.gameObject.CompareTag("Terrain"))
+        {
+            if(!isGrounded)
+                isGrounded = true;
+        }
+    }
     // Function to detect if the game character is off the ground
     private void OnCollisionExit(Collision collision) {
         if (collision.gameObject.CompareTag("Terrain")) {
