@@ -41,9 +41,9 @@ public class GUIController : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
         healthBarSlider.value = PlayerHealth.playerHealth.currentHealth;
-
     }
 
     private void SetKeyImage(string name)
