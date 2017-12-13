@@ -130,23 +130,20 @@ public class PlayerHealth : MonoBehaviour {
         fadeColor = fadingPanel.color;
     }
 
-    private void UpdateWarning()
-    {
+    private void UpdateWarning() {
 
         // Timer used to activate and deactivate warning panel for low health 
         if (timerActive)
             timer += Time.deltaTime;
 
         // When health goes from >20 to <=20
-        if(currentHealth <= 20 && !timerActive)
-        {
+        if (currentHealth <= 20 && !timerActive) {
             lowHealthWarning.SetActive(!warningActive);
             timerActive = true;
             warningActive = !warningActive;
         }
         // If Health is below 20% and the timer has exceeded timeLimit variable
-        else if(currentHealth <= 20f && timer >= timerLimit)
-        {
+        else if (currentHealth <= 20f && timer >= timerLimit) {
             // Reset timer and change active state of warning
             timer = 0f;
             lowHealthWarning.SetActive(!warningActive);
@@ -159,12 +156,13 @@ public class PlayerHealth : MonoBehaviour {
                 timerLimit = 0.10f;
         }
         // If health goes over 20% after being below 20%
-        else if(currentHealth >= 20f && timerActive)
-        {
+        else if (currentHealth >= 20f && timerActive) {
             // Disable warning and reset timer
             lowHealthWarning.SetActive(false);
             timerActive = false;
             timer = 0f;
+        }
+    }
 
     private void OnCollisionEnter(Collision collision) {
         float fallDamage = playerController.verticalVel;
@@ -174,3 +172,5 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 }
+
+

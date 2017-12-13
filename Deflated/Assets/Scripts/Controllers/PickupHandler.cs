@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 /**
  *  Class which controls the behaviour of the pickups in the game. When a player collides/picks up
