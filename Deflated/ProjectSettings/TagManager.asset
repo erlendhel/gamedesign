@@ -30,6 +30,7 @@ TagManager:
   - YellowButton
   - BlueButton
   - GreenButton
+  - RedButton
   layers:
   - Default
   - TransparentFX

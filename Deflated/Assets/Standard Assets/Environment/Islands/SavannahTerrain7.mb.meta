@@ -1,0 +1,247 @@
+fileFormatVersion: 2
+guid: 6409459e01e536a47a6fd5212957fdcd
+timeCreated: 1512901832
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Lake
+    100002: Lava
+    100004: River
+    100006: River1
+    100008: River10
+    100010: River11
+    100012: River12
+    100014: River13
+    100016: River14
+    100018: River15
+    100020: River16
+    100022: River17
+    100024: River18
+    100026: River19
+    100028: River2
+    100030: River20
+    100032: River21
+    100034: River22
+    100036: River23
+    100038: River24
+    100040: River25
+    100042: River26
+    100044: River27
+    100046: River28
+    100048: River29
+    100050: River3
+    100052: River4
+    100054: River5
+    100056: River6
+    100058: River7
+    100060: River8
+    100062: River9
+    100064: SavannahTerrain
+    100066: //RootNode
+    400000: Lake
+    400002: Lava
+    400004: River
+    400006: River1
+    400008: River10
+    400010: River11
+    400012: River12
+    400014: River13
+    400016: River14
+    400018: River15
+    400020: River16
+    400022: River17
+    400024: River18
+    400026: River19
+    400028: River2
+    400030: River20
+    400032: River21
+    400034: River22
+    400036: River23
+    400038: River24
+    400040: River25
+    400042: River26
+    400044: River27
+    400046: River28
+    400048: River29
+    400050: River3
+    400052: River4
+    400054: River5
+    400056: River6
+    400058: River7
+    400060: River8
+    400062: River9
+    400064: SavannahTerrain
+    400066: //RootNode
+    2300000: Lake
+    2300002: Lava
+    2300004: River1
+    2300006: River10
+    2300008: River11
+    2300010: River12
+    2300012: River13
+    2300014: River14
+    2300016: River15
+    2300018: River16
+    2300020: River17
+    2300022: River18
+    2300024: River19
+    2300026: River2
+    2300028: River20
+    2300030: River21
+    2300032: River22
+    2300034: River23
+    2300036: River24
+    2300038: River25
+    2300040: River26
+    2300042: River27
+    2300044: River28
+    2300046: River29
+    2300048: River3
+    2300050: River4
+    2300052: River5
+    2300054: River6
+    2300056: River7
+    2300058: River8
+    2300060: River9
+    2300062: SavannahTerrain
+    3300000: Lake
+    3300002: Lava
+    3300004: River1
+    3300006: River10
+    3300008: River11
+    3300010: River12
+    3300012: River13
+    3300014: River14
+    3300016: River15
+    3300018: River16
+    3300020: River17
+    3300022: River18
+    3300024: River19
+    3300026: River2
+    3300028: River20
+    3300030: River21
+    3300032: River22
+    3300034: River23
+    3300036: River24
+    3300038: River25
+    3300040: River26
+    3300042: River27
+    3300044: River28
+    3300046: River29
+    3300048: River3
+    3300050: River4
+    3300052: River5
+    3300054: River6
+    3300056: River7
+    3300058: River8
+    3300060: River9
+    3300062: SavannahTerrain
+    4300000: SavannahTerrain
+    4300002: Lava
+    4300004: Lake
+    4300006: River1
+    4300008: River2
+    4300010: River3
+    4300012: River4
+    4300014: River5
+    4300016: River6
+    4300018: River7
+    4300020: River8
+    4300022: River9
+    4300024: River10
+    4300026: River11
+    4300028: River12
+    4300030: River13
+    4300032: River14
+    4300034: River15
+    4300036: River16
+    4300038: River17
+    4300040: River18
+    4300042: River19
+    4300044: River20
+    4300046: River21
+    4300048: River22
+    4300050: River23
+    4300052: River24
+    4300054: River25
+    4300056: River26
+    4300058: River27
+    4300060: River28
+    4300062: River29
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
