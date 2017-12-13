@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+/**
+ *  Class controlling the inventory of a player in 'play-mode'.
+ **/
 public class PlayerInventory : MonoBehaviour {
 
-    // Variables indicating if the player has a pickup or not. Public because they are written to in ActionController
+    // Booleans indicating if a player has a pickup or not.
     public static bool hasMinimizer, hasMaximizer, hasDecreaseGrav, hasIncreaseGrav,
         hasInstantSpeed, hasTimeBasedSpeed, hasInstantJump, hasTimeBasedJump = false;
 
@@ -15,108 +17,76 @@ public class PlayerInventory : MonoBehaviour {
     // Variables indicating which keyparts the player has picked up
     private static bool hasFirstKeyPart, hasSecondKeyPart, hasThirdKeyPart = false;
 
-
     private void OnTriggerEnter(Collider pickup) {
-        if (pickup.gameObject.CompareTag("Minimizer"))
-        {
+        if (pickup.gameObject.CompareTag("Minimizer")) {
             hasMinimizer = true;
             GUIController.guiController.minimizerButton.interactable = true;
-        }
-        else if (pickup.gameObject.CompareTag("Maximizer"))
-        {
+        } else if (pickup.gameObject.CompareTag("Maximizer")) {
             hasMaximizer = true;
             GUIController.guiController.maximizerButton.interactable = true;
-        }
-        else if (pickup.gameObject.CompareTag("IncreaseGrav"))
-        {
+        } else if (pickup.gameObject.CompareTag("IncreaseGrav")) {
             hasIncreaseGrav = true;
             GUIController.guiController.increaseGravButton.interactable = true;
-        }
-        else if (pickup.gameObject.CompareTag("DecreaseGrav"))
-        {
+        } else if (pickup.gameObject.CompareTag("DecreaseGrav")) {
             hasDecreaseGrav = true;
             GUIController.guiController.decreaseGravButton.interactable = true;
-        }
-        else if (pickup.gameObject.CompareTag("InstantJump"))
-        {
+        } else if (pickup.gameObject.CompareTag("InstantJump")) {
             hasInstantJump = true;
             GUIController.guiController.instantJumpButton.interactable = true;
-        }
-        else if (pickup.gameObject.CompareTag("TimeBasedJump"))
-        {
+        } else if (pickup.gameObject.CompareTag("TimeBasedJump")) {
             hasTimeBasedJump = true;
             GUIController.guiController.timedJumpButton.interactable = true;
-        }
-        else if (pickup.gameObject.CompareTag("SpeedInstant"))
-        {
+        } else if (pickup.gameObject.CompareTag("SpeedInstant")) {
             hasInstantSpeed = true;
             GUIController.guiController.instantSpeedButton.interactable = true;
-        }
-        else if (pickup.gameObject.CompareTag("SpeedTime"))
-        {
+        } else if (pickup.gameObject.CompareTag("SpeedTime")) {
             hasTimeBasedSpeed = true;
             GUIController.guiController.timedSpeedButton.interactable = true;
-        }
-        else if (pickup.gameObject.CompareTag("Key"))
-        {
+        } else if (pickup.gameObject.CompareTag("Key")) {
             hasKey = true;
-        }
-        else if (pickup.gameObject.CompareTag("FirstKeyPart"))
-        {
+        } else if (pickup.gameObject.CompareTag("FirstKeyPart")) {
             hasFirstKeyPart = true;
             GUIController.guiController.SetKeyImage();
-        }
-        else if (pickup.gameObject.CompareTag("SecondKeyPart"))
-        {
+        } else if (pickup.gameObject.CompareTag("SecondKeyPart")) {
             hasSecondKeyPart = true;
             GUIController.guiController.SetKeyImage();
-        }
-        else if (pickup.gameObject.CompareTag("ThirdKeyPart"))
-        {
+        } else if (pickup.gameObject.CompareTag("ThirdKeyPart")) {
             hasThirdKeyPart = true;
             GUIController.guiController.SetKeyImage();
         }
     }
 
     // Used to check on collisions with locks that require one whole key to be picked up
-    public static bool HasKey()
-    {
+    public static bool HasKey() {
         return hasKey;
     }
 
     // Used to check on collison with locks that require all parts of a key to be picked up
-    public static bool HasAllKeyParts()
-    {
+    public static bool HasAllKeyParts() {
         return hasFirstKeyPart && hasSecondKeyPart && hasThirdKeyPart;
     }
 
-    public static bool HasBottomKeyPart()
-    {
+    public static bool HasBottomKeyPart() {
         return hasFirstKeyPart && !hasSecondKeyPart && !hasThirdKeyPart;
     }
 
-    public static bool HasMiddleKeyPart()
-    {
+    public static bool HasMiddleKeyPart() {
         return !hasFirstKeyPart && hasSecondKeyPart && !hasThirdKeyPart;
     }
 
-    public static bool HasTopKeyPart()
-    {
+    public static bool HasTopKeyPart() {
         return !hasFirstKeyPart && !hasSecondKeyPart && hasThirdKeyPart;
     }
 
-    public static bool HasBottomAndMiddleKeyPart()
-    {
+    public static bool HasBottomAndMiddleKeyPart() {
         return hasFirstKeyPart && hasSecondKeyPart && !hasThirdKeyPart;
     }
 
-    public static bool HasMiddleAndTopKeyPart()
-    {
+    public static bool HasMiddleAndTopKeyPart() {
         return !hasFirstKeyPart && hasSecondKeyPart && hasThirdKeyPart;
     }
 
-    public static bool HasTopAndBottomKeyPart()
-    {
+    public static bool HasTopAndBottomKeyPart() {
         return hasFirstKeyPart && !hasSecondKeyPart && hasThirdKeyPart;
     }
 }

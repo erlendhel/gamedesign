@@ -120,7 +120,6 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 
-
     private void RespawnAnimation()
     {
         // Activate fadeout gameobject
@@ -166,6 +165,12 @@ public class PlayerHealth : MonoBehaviour {
             lowHealthWarning.SetActive(false);
             timerActive = false;
             timer = 0f;
+
+    private void OnCollisionEnter(Collision collision) {
+        float fallDamage = playerController.verticalVel;
+        if (collision.gameObject.CompareTag("Terrain") && fallDamage <= -30.0f) {
+            print("Fall damage");
+            currentHealth += fallDamage / 1.5f;
         }
     }
 }
