@@ -28,34 +28,31 @@ public class ActionController : MonoBehaviour {
     void Update () {
         if (Input.GetKeyDown("1") && PlayerInventory.hasMinimizer) {
             ActivateMinimizer();
-            GUIController.guiController.minimizerButton.interactable = false;
         } else if (Input.GetKeyDown("2") && PlayerInventory.hasMaximizer) {
             ActivateMaximizer();
-            GUIController.guiController.maximizerButton.interactable = false;
         } else if (Input.GetKeyDown("3") && PlayerInventory.hasDecreaseGrav) {
             ActivateDecreaseGrav();
-            GUIController.guiController.decreaseGravButton.interactable = false;
         } else if (Input.GetKeyDown("4") && PlayerInventory.hasIncreaseGrav) {
             ActivateIncreaseGrav();
-            GUIController.guiController.increaseGravButton.interactable = false;
         } else if (Input.GetKeyDown("5") && PlayerInventory.hasTimeBasedSpeed) {
             ActivateTimeSpeed();
-            GUIController.guiController.timedSpeedButton.interactable = false;
         } else if (Input.GetKeyDown("6") && PlayerInventory.hasInstantSpeed) {
             ActivateInstantSpeed();
-            GUIController.guiController.instantSpeedButton.interactable = false;
         } else if (Input.GetKeyDown("7") && PlayerInventory.hasTimeBasedJump) {
             ActivateTimeJump();
-            GUIController.guiController.timedJumpButton.interactable = false;
         } else if (Input.GetKeyDown("8") && PlayerInventory.hasInstantJump) {
             ActivateInstantJump();
-            GUIController.guiController.instantJumpButton.interactable = false;
         }
        
     }
 
     // Function that activates the minimizer-pickup
     public void ActivateMinimizer() {
+        // Set image color to indicate it no longer in inventory
+        Color oldImageColor = GUIController.guiController.minimizerImage.color;
+        Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 0.1f);
+        GUIController.guiController.minimizerImage.color = newImageColor;
+
         // Check if a maximizer-pickup is activated, if it has, stop the current coroutine
         if (maximizerActive == true) {
             StopCoroutine("MaxMinTimer");
@@ -71,10 +68,15 @@ public class ActionController : MonoBehaviour {
         minimizerActive = true;
         // Start coroutine to time and cancel the pickup
         StartCoroutine("MaxMinTimer");
+        GUIController.guiController.minimizerButton.interactable = false;
     }
 
     // Function that activates the maximizer-pickup
     public void ActivateMaximizer() {
+        // Set image color to indicate it no longer in inventory
+        Color oldImageColor = GUIController.guiController.maximizerImage.color;
+        Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 0.1f);
+        GUIController.guiController.maximizerImage.color = newImageColor;
 
         // Check if a minimizer-pickup is activated, if it has, stop the current coroutine
         if (minimizerActive == true) {
@@ -91,10 +93,16 @@ public class ActionController : MonoBehaviour {
         maximizerActive = true;
         // Start coroutine to time and cancel the pickup
         StartCoroutine("MaxMinTimer");
+        GUIController.guiController.maximizerButton.interactable = false;
     }
 
     // Function that activates the increase-gravity-pickup
     public void ActivateIncreaseGrav() {
+        // Set image color to indicate it no longer in inventory
+        Color oldImageColor = GUIController.guiController.increaseGravImage.color;
+        Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 0.1f);
+        GUIController.guiController.increaseGravImage.color = newImageColor;
+
         // If decreaseGravity is active, stop the coroutine controlling gravity pickups
         if (decreaseGravActive == true) {
             StopCoroutine("GravTimer");
@@ -106,9 +114,15 @@ public class ActionController : MonoBehaviour {
         increaseGravActive = true;
 
         StartCoroutine("GravTimer");
+        GUIController.guiController.increaseGravButton.interactable = false;
     }
 
     public void ActivateDecreaseGrav() {
+        // Set image color to indicate it is in inventory
+        Color oldImageColor = GUIController.guiController.decreaseGravImage.color;
+        Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 0.1f);
+        GUIController.guiController.decreaseGravImage.color = newImageColor;
+
         if (increaseGravActive == true) {
             StopCoroutine("GravTimer");
         }
@@ -117,9 +131,15 @@ public class ActionController : MonoBehaviour {
         PlayerInventory.hasDecreaseGrav = false;
         decreaseGravActive = true;
         StartCoroutine("GravTimer");
+        GUIController.guiController.decreaseGravButton.interactable = false;
     }
 
     public void ActivateInstantSpeed() {
+        // Set image color to indicate it is in inventory
+        Color oldImageColor = GUIController.guiController.instantSpeedImage.color;
+        Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 0.1f);
+        GUIController.guiController.instantSpeedImage.color = newImageColor;
+
         //Set the movement to where the camera z-axis is pointing
         Vector3 movement = new Vector3(0, 0, 1);
         movement = Camera.main.transform.TransformDirection(movement);
@@ -128,21 +148,34 @@ public class ActionController : MonoBehaviour {
 
         playerController.rb.AddForce(movement * instantSpeedPower);
         PlayerInventory.hasInstantSpeed = false;
+        GUIController.guiController.instantSpeedButton.interactable = false;
     }
 
     public void ActivateTimeSpeed() {
+        // Set image color to indicate it no longer in inventory
+        Color oldImageColor = GUIController.guiController.timeSpeedImage.color;
+        Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 0.1f);
+        GUIController.guiController.timeSpeedImage.color = newImageColor;
+
         if (timeBasedSpeedActive == true) {
             StopCoroutine("SpeedTimer");
         }
         playerController.speed *= 2;
+        Debug.Log("Time Speed");
 
         PlayerInventory.hasTimeBasedSpeed = false;
         timeBasedSpeedActive = true;
         StartCoroutine("SpeedTimer");
+        GUIController.guiController.timedSpeedButton.interactable = false;
     }
 
     //Activates Instant-jump pickup
     public void ActivateInstantJump() {
+        // Set image color to indicate it is in inventory
+        Color oldImageColor = GUIController.guiController.instantJumpImage.color;
+        Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 0.1f);
+        GUIController.guiController.instantJumpImage.color = newImageColor;
+
         if (playerController.isGrounded == true && 
                 playerController.inWater == false) {
 
@@ -152,12 +185,20 @@ public class ActionController : MonoBehaviour {
         } else {
             playerController.rb.AddForce(Vector3.up * playerController.jumpSpeed);
         }
+
+        GUIController.guiController.instantJumpButton.interactable = false;
     }
 
     public void ActivateTimeJump() {
+        // Set image color to indicate it no longer in inventory
+        Color oldImageColor = GUIController.guiController.timeJumpImage.color;
+        Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 0.1f);
+        GUIController.guiController.timeJumpImage.color = newImageColor;
+        
         playerController.jumpSpeed = playerController.jumpSpeed * 2;
         PlayerInventory.hasTimeBasedJump = false;
         StartCoroutine("JumpTimer");
+        GUIController.guiController.timedJumpButton.interactable = false;
     }
 
     IEnumerator MaxMinTimer() {
