@@ -75,6 +75,10 @@ public class PlayerHealth : MonoBehaviour {
         // Decrease health by small amount every frame update
         currentHealth -= healthDecrease * Time.deltaTime;
 
+        if (playerController.inWater) {
+            StartCoroutine("WaterDamage");
+        }
+
         // When player runs out of health
         if (currentHealth <= 0)
             RespawnAnimation();
@@ -220,6 +224,11 @@ public class PlayerHealth : MonoBehaviour {
             print("Fall damage");
             currentHealth += fallDamage / 1.5f;
         }
+    }
+
+    IEnumerator WaterDamage() {
+        currentHealth -= 0.5f;
+        yield return new WaitForSeconds(1.0f);
     }
 }
 
