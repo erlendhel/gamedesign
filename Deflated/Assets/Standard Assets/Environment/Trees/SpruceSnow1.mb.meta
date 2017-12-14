@@ -1,0 +1,414 @@
+fileFormatVersion: 2
+guid: e1cb88885499e514dbca3d593c428f41
+timeCreated: 1511947007
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Bottom
+    100002: Leaf
+    100004: Leaf 1
+    100006: Leaf 2
+    100008: Leaf 3
+    100010: Leaf 4
+    100012: Leaf 5
+    100014: Leaf 6
+    100016: Leaf 7
+    100018: Leaf1
+    100020: Middle1
+    100022: Middle2
+    100024: pCube1
+    100026: pCube10
+    100028: pCube10 1
+    100030: pCube11
+    100032: pCube11 1
+    100034: pCube12
+    100036: pCube12 1
+    100038: pCube13
+    100040: pCube13 1
+    100042: pCube14
+    100044: pCube14 1
+    100046: pCube15
+    100048: pCube15 1
+    100050: pCube16
+    100052: pCube16 1
+    100054: pCube17
+    100056: pCube17 1
+    100058: pCube18
+    100060: pCube18 1
+    100062: pCube19
+    100064: pCube19 1
+    100066: pCube2
+    100068: pCube20
+    100070: pCube20 1
+    100072: pCube21
+    100074: pCube21 1
+    100076: pCube22
+    100078: pCube23
+    100080: pCube24
+    100082: pCube25
+    100084: pCube26
+    100086: pCube27
+    100088: pCube28
+    100090: pCube29
+    100092: pCube3
+    100094: pCube30
+    100096: pCube31
+    100098: pCube32
+    100100: pCube33
+    100102: pCube34
+    100104: pCube35
+    100106: pCube36
+    100108: pCube4
+    100110: pCube5
+    100112: pCube6
+    100114: pCube7
+    100116: pCube8
+    100118: pCube9
+    100120: pCube9 1
+    100122: Snow
+    100124: Snow 1
+    100126: Snow 2
+    100128: Snow 3
+    100130: Snow 4
+    100132: Snow 5
+    100134: Snow 6
+    100136: Snow 7
+    100138: Snow1
+    100140: //RootNode
+    100142: Stem
+    100144: Top
+    100146: TopSnow
+    400000: Bottom
+    400002: Leaf
+    400004: Leaf 1
+    400006: Leaf 2
+    400008: Leaf 3
+    400010: Leaf 4
+    400012: Leaf 5
+    400014: Leaf 6
+    400016: Leaf 7
+    400018: Leaf1
+    400020: Middle1
+    400022: Middle2
+    400024: pCube1
+    400026: pCube10
+    400028: pCube10 1
+    400030: pCube11
+    400032: pCube11 1
+    400034: pCube12
+    400036: pCube12 1
+    400038: pCube13
+    400040: pCube13 1
+    400042: pCube14
+    400044: pCube14 1
+    400046: pCube15
+    400048: pCube15 1
+    400050: pCube16
+    400052: pCube16 1
+    400054: pCube17
+    400056: pCube17 1
+    400058: pCube18
+    400060: pCube18 1
+    400062: pCube19
+    400064: pCube19 1
+    400066: pCube2
+    400068: pCube20
+    400070: pCube20 1
+    400072: pCube21
+    400074: pCube21 1
+    400076: pCube22
+    400078: pCube23
+    400080: pCube24
+    400082: pCube25
+    400084: pCube26
+    400086: pCube27
+    400088: pCube28
+    400090: pCube29
+    400092: pCube3
+    400094: pCube30
+    400096: pCube31
+    400098: pCube32
+    400100: pCube33
+    400102: pCube34
+    400104: pCube35
+    400106: pCube36
+    400108: pCube4
+    400110: pCube5
+    400112: pCube6
+    400114: pCube7
+    400116: pCube8
+    400118: pCube9
+    400120: pCube9 1
+    400122: Snow
+    400124: Snow 1
+    400126: Snow 2
+    400128: Snow 3
+    400130: Snow 4
+    400132: Snow 5
+    400134: Snow 6
+    400136: Snow 7
+    400138: Snow1
+    400140: //RootNode
+    400142: Stem
+    400144: Top
+    400146: TopSnow
+    2300000: Leaf
+    2300002: Leaf 1
+    2300004: Leaf 2
+    2300006: Leaf 3
+    2300008: Leaf 4
+    2300010: Leaf 5
+    2300012: Leaf 6
+    2300014: Leaf 7
+    2300016: Leaf1
+    2300018: pCube10
+    2300020: pCube10 1
+    2300022: pCube11
+    2300024: pCube11 1
+    2300026: pCube12
+    2300028: pCube12 1
+    2300030: pCube13
+    2300032: pCube13 1
+    2300034: pCube14
+    2300036: pCube14 1
+    2300038: pCube15
+    2300040: pCube15 1
+    2300042: pCube16
+    2300044: pCube16 1
+    2300046: pCube17
+    2300048: pCube17 1
+    2300050: pCube18
+    2300052: pCube18 1
+    2300054: pCube19
+    2300056: pCube19 1
+    2300058: pCube20
+    2300060: pCube20 1
+    2300062: pCube21
+    2300064: pCube21 1
+    2300066: pCube22
+    2300068: pCube23
+    2300070: pCube24
+    2300072: pCube25
+    2300074: pCube26
+    2300076: pCube27
+    2300078: pCube28
+    2300080: pCube29
+    2300082: pCube30
+    2300084: pCube31
+    2300086: pCube32
+    2300088: pCube33
+    2300090: pCube34
+    2300092: pCube35
+    2300094: pCube36
+    2300096: pCube9
+    2300098: pCube9 1
+    2300100: Snow
+    2300102: Snow 1
+    2300104: Snow 2
+    2300106: Snow 3
+    2300108: Snow 4
+    2300110: Snow 5
+    2300112: Snow 6
+    2300114: Snow 7
+    2300116: Snow1
+    2300118: Stem
+    2300120: TopSnow
+    3300000: Leaf
+    3300002: Leaf 1
+    3300004: Leaf 2
+    3300006: Leaf 3
+    3300008: Leaf 4
+    3300010: Leaf 5
+    3300012: Leaf 6
+    3300014: Leaf 7
+    3300016: Leaf1
+    3300018: pCube10
+    3300020: pCube10 1
+    3300022: pCube11
+    3300024: pCube11 1
+    3300026: pCube12
+    3300028: pCube12 1
+    3300030: pCube13
+    3300032: pCube13 1
+    3300034: pCube14
+    3300036: pCube14 1
+    3300038: pCube15
+    3300040: pCube15 1
+    3300042: pCube16
+    3300044: pCube16 1
+    3300046: pCube17
+    3300048: pCube17 1
+    3300050: pCube18
+    3300052: pCube18 1
+    3300054: pCube19
+    3300056: pCube19 1
+    3300058: pCube20
+    3300060: pCube20 1
+    3300062: pCube21
+    3300064: pCube21 1
+    3300066: pCube22
+    3300068: pCube23
+    3300070: pCube24
+    3300072: pCube25
+    3300074: pCube26
+    3300076: pCube27
+    3300078: pCube28
+    3300080: pCube29
+    3300082: pCube30
+    3300084: pCube31
+    3300086: pCube32
+    3300088: pCube33
+    3300090: pCube34
+    3300092: pCube35
+    3300094: pCube36
+    3300096: pCube9
+    3300098: pCube9 1
+    3300100: Snow
+    3300102: Snow 1
+    3300104: Snow 2
+    3300106: Snow 3
+    3300108: Snow 4
+    3300110: Snow 5
+    3300112: Snow 6
+    3300114: Snow 7
+    3300116: Snow1
+    3300118: Stem
+    3300120: TopSnow
+    4300000: Leaf
+    4300002: Snow
+    4300004: Leaf1
+    4300006: Leaf
+    4300008: Snow
+    4300010: Leaf
+    4300012: Snow
+    4300014: Leaf
+    4300016: Snow
+    4300018: Leaf
+    4300020: Snow
+    4300022: Snow1
+    4300024: Leaf
+    4300026: Snow
+    4300028: Leaf
+    4300030: Snow
+    4300032: Leaf
+    4300034: Snow
+    4300036: pCube9
+    4300038: pCube10
+    4300040: pCube11
+    4300042: pCube12
+    4300044: pCube13
+    4300046: pCube14
+    4300048: pCube15
+    4300050: pCube16
+    4300052: pCube17
+    4300054: pCube18
+    4300056: pCube19
+    4300058: pCube20
+    4300060: pCube21
+    4300062: pCube9
+    4300064: pCube10
+    4300066: pCube11
+    4300068: pCube12
+    4300070: pCube13
+    4300072: pCube14
+    4300074: pCube15
+    4300076: pCube16
+    4300078: pCube17
+    4300080: pCube18
+    4300082: pCube19
+    4300084: pCube20
+    4300086: pCube21
+    4300088: pCube22
+    4300090: pCube23
+    4300092: pCube24
+    4300094: pCube25
+    4300096: pCube26
+    4300098: pCube27
+    4300100: pCube28
+    4300102: pCube29
+    4300104: pCube30
+    4300106: pCube31
+    4300108: pCube32
+    4300110: pCube33
+    4300112: pCube34
+    4300114: pCube35
+    4300116: pCube36
+    4300118: Stem
+    4300120: TopSnow
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -21,7 +21,6 @@ public class GUIController : MonoBehaviour {
     private Color keyImageColor;
     private float startAlphaValue;
 
-    
 
     private void Start() {
         if (guiController == null) {
@@ -38,12 +37,14 @@ public class GUIController : MonoBehaviour {
 
         keyImageColor = keyImage.color;
         startAlphaValue = keyImage.color.a;
+
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
         healthBarSlider.value = PlayerHealth.playerHealth.currentHealth;
-	}
+    }
 
     private void SetKeyImage(string name)
     {
