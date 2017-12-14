@@ -10,9 +10,10 @@ public class PlayerHealth : MonoBehaviour {
     public static PlayerHealth playerHealth;
 
     private float initialHealth = 100f;
-    private float healthDecrease = 1.0f;
+    private float healthDecrease = 1.2f;
     public float currentHealth;
 
+    // Health and currency values of the three different air bubble sizes
     private float smallIncrease = 10.0f;
     private float mediumIncrease = 15.0f;
     private float bigIncrease = 20.0f;
@@ -48,16 +49,18 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 
-    void Start () {
+    void Start ()
+    {
         playerController = GetComponent<PlayerController>();
         currentHealth = initialHealth;
 
-        // Related to warning panel
+        // Related to flashing warning frame
         warningActive = lowHealthWarning.activeInHierarchy;
         timer = 0f;
         timerActive = false;
         timerLimit = 0.20f;
 
+        // A gray transparent panel which gradually fade in when player health reaches 0%
         fadingPanel = fadeout.gameObject.GetComponent<Image>();
         fadeColor = fadingPanel.color;
         fadeTimer = 0f;
@@ -67,7 +70,6 @@ public class PlayerHealth : MonoBehaviour {
         animationCanBePlayed = true;
 	}
 	
-	// Update is called once per frame
 	void Update ()
     {
         // Decrease health by small amount every frame update
@@ -81,6 +83,9 @@ public class PlayerHealth : MonoBehaviour {
             UpdateFlashingFrame();
 	}
 
+    /**
+     * Increase health and currency on collision with air bubbles
+     * **/
     private void OnTriggerEnter(Collider bubble) {
         if (bubble.gameObject.CompareTag("SmallBubble") && !respawning) {
             CurrencyManager.currencyManager.currency += smallIncrease;
@@ -109,6 +114,10 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 
+    /**
+     * Function which over 4 seconds fades a gray transparent panel indicating the player
+     * has died. Also activates a text singaling the player that he/she is respawning
+     **/
     private void RespawnAnimation()
     {
         // Increase timer
@@ -119,9 +128,11 @@ public class PlayerHealth : MonoBehaviour {
         if (!fadeout.activeInHierarchy)
             fadeout.SetActive(true);
 
+        // Activate "respawning" text
         if (!respawningText.activeInHierarchy)
             respawningText.SetActive(true);
 
+        // Remove red frame if it is active
         if (lowHealthWarning.activeInHierarchy)
             lowHealthWarning.SetActive(false);
 
@@ -157,6 +168,11 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 
+    /**
+     * Function which updates a flashing red frame in screen if player health is below
+     * 20%. From 20% to 10%, the blinking will gradually increase speed between the blinking,
+     * and a constant speed from 10% to 0% 
+     **/
     private void UpdateFlashingFrame()
     {
 
