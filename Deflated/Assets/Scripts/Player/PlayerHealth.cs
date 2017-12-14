@@ -175,7 +175,6 @@ public class PlayerHealth : MonoBehaviour {
      **/
     private void UpdateFlashingFrame()
     {
-
         // Timer used to activate and deactivate warning panel for low health 
         if (timerActive)
             timer += Time.deltaTime;
@@ -188,6 +187,7 @@ public class PlayerHealth : MonoBehaviour {
             warningActive = !warningActive;
         }
         // If Health is below 20% and the timer has exceeded timeLimit variable
+
         else if (currentHealth <= 20f && timer >= timerLimit)
         {
             // Reset timer and change active state of warning
@@ -202,6 +202,7 @@ public class PlayerHealth : MonoBehaviour {
                 timerLimit = 0.10f;
         }
         // If health goes over 20% after being below 20%
+
         else if (currentHealth >= 20f && timerActive)
         {
             // Disable warning and reset timer
@@ -210,6 +211,7 @@ public class PlayerHealth : MonoBehaviour {
             timer = 0f;
         }
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         float fallDamage = playerController.verticalVel;
@@ -220,3 +222,5 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 }
+
+
