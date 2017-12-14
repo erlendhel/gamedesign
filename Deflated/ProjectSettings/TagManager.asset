@@ -31,6 +31,7 @@ TagManager:
   - BlueButton
   - GreenButton
   - RedButton
+  - River
   layers:
   - Default
   - TransparentFX

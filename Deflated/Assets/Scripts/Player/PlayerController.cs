@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 
     public bool isGrounded = true;
     public bool inWater = false;
+    public bool canJump = true;
     public Rigidbody rb;
     public Animator teleAnim;
 
@@ -48,7 +49,7 @@ public class PlayerController : MonoBehaviour {
         vel = rb.velocity.magnitude;
         verticalVel = rb.velocity.y;
 
-        if (Input.GetKeyDown("space") && isGrounded) {
+        if (Input.GetKeyDown("space") && isGrounded && canJump) {
             Jump();
         }
         if (Input.GetKeyDown("space") && swinging) {
