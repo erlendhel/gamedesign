@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour {
         if (inWater == false) {
             rb.AddForce(movement * speed);
         } else {
-            rb.AddForce(movement * (speed / 3));
+            rb.AddForce(movement * (speed / 10));
         }
 
 
@@ -114,9 +114,6 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.CompareTag("Terrain")) {
             isGrounded = true;
         }
-        if (collision.gameObject.CompareTag("Water")) {
-            inWater = true;
-        }
         if (collision.gameObject.CompareTag("BouncyMat")) {
             rb.AddForce(Vector3.up * 1400);
         }
@@ -134,7 +131,11 @@ public class PlayerController : MonoBehaviour {
             if(!isGrounded)
                 isGrounded = true;
         }
+        if (collision.gameObject.CompareTag("Water")) {
+            inWater = true;
+        }
     }
+
     // Function to detect if the game character is off the ground
     private void OnCollisionExit(Collision collision) {
         if (collision.gameObject.CompareTag("Terrain")) {
