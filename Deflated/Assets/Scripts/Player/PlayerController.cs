@@ -162,4 +162,7 @@ public class PlayerController : MonoBehaviour {
     public bool IsGrounded() {
         return isGrounded;
     }
+    public void SetRespawnPosition(Vector3 position) {
+        spawnPosition = position;
+    }
 }
