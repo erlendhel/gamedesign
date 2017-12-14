@@ -133,6 +133,11 @@ public class PlayerController : MonoBehaviour {
         }
         if (collision.gameObject.CompareTag("Water")) {
             inWater = true;
+            isGrounded = false;
+        }
+        if (collision.gameObject.CompareTag("River")) {
+            inWater = true;
+            isGrounded = false;
         }
     }
 
