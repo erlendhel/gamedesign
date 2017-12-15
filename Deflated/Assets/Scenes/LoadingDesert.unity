@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3cb2762c07dd6c468c54cb1036eb8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 0
+  sceneIndex: 5
   slider: {fileID: 2019773055}
 --- !u!4 &1157015699
 Transform:
