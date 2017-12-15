@@ -20,17 +20,17 @@ public class CollapsingRockHandler : MonoBehaviour {
     }
 
     IEnumerator Collapse() {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(6);
         stones[7].isKinematic = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.3f);
         stones[6].isKinematic = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.3f);
         stones[5].isKinematic = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.3f);
         stones[4].isKinematic = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.3f);
         stones[3].isKinematic = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.3f);
         stones[2].isKinematic = false;
 
     }

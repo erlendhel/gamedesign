@@ -14,7 +14,7 @@ public class MagnetArch : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             rb = collision.gameObject.GetComponent<Rigidbody>();
-            rb.AddForce(0f, 25.0f, 0f);
+            rb.AddForce(0f, 15f, 0f);
         }
     }
 
