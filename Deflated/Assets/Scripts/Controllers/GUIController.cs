@@ -18,6 +18,9 @@ public class GUIController : MonoBehaviour {
     public Image maximizerImage, minimizerImage, decreaseGravImage, increaseGravImage,
         timeSpeedImage, instantSpeedImage, timeJumpImage, instantJumpImage;
 
+    // Panels which decreases over time to indicate for how long the pickup is active
+    public Image jumpTimer, speedTimer, maximizerTimer, minimizerTimer, increaseGravTimer, decreaseGravTimer;
+
     // All the sprites used to show different combinations of which key parts are picked up
     public KeySprite[] keyImages = new KeySprite[8];
     public Image keyImage;

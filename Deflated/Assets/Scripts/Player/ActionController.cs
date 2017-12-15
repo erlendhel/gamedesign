@@ -43,9 +43,24 @@ public class ActionController : MonoBehaviour {
         } else if (Input.GetKeyDown("8") && PlayerInventory.hasInstantJump) {
             ActivateInstantJump();
         }
-       
     }
 
+    private void FixedUpdate()
+    {
+        // Update timer panels when a pickup is active
+        if (timeBasedJumpActive)
+            GUIController.guiController.jumpTimer.fillAmount -= (Time.deltaTime * 0.2f);
+        if (timeBasedSpeedActive)
+            GUIController.guiController.speedTimer.fillAmount -= (Time.deltaTime * 0.2f);
+        if (minimizerActive)
+            GUIController.guiController.minimizerTimer.fillAmount -= (Time.deltaTime * 0.2f);
+        if (maximizerActive)
+            GUIController.guiController.maximizerTimer.fillAmount -= (Time.deltaTime * 0.2f);
+        if (increaseGravActive)
+            GUIController.guiController.increaseGravTimer.fillAmount -= (Time.deltaTime * 0.2f);
+        if (decreaseGravActive)
+            GUIController.guiController.decreaseGravTimer.fillAmount -= (Time.deltaTime * 0.2f);
+    }
     // Function that activates the minimizer-pickup
     public void ActivateMinimizer() {
         // Set image color to indicate it no longer in inventory
@@ -55,12 +70,16 @@ public class ActionController : MonoBehaviour {
 
         // Check if a maximizer-pickup is activated, if it has, stop the current coroutine
         if (maximizerActive == true) {
+            GUIController.guiController.maximizerTimer.fillAmount = 0f;
             StopCoroutine("MaxMinTimer");
         }
         // Apply the buff from the minimizer
         transform.localScale = playerController.initScale / 2;
 
         playerController.rb.mass = playerController.initMass / 2;
+
+        // Fill timer
+        GUIController.guiController.minimizerTimer.fillAmount = 1f;
 
         // "Delete" the minimizer from the inventory
         PlayerInventory.hasMinimizer = false;
@@ -80,12 +99,16 @@ public class ActionController : MonoBehaviour {
 
         // Check if a minimizer-pickup is activated, if it has, stop the current coroutine
         if (minimizerActive == true) {
+            GUIController.guiController.minimizerTimer.fillAmount = 0f;
             StopCoroutine("MaxMinTimer");
         }
         // Apply the buff from the maximizer
         transform.localScale = playerController.initScale * 2;
 
         playerController.rb.mass = playerController.initMass * 2;
+
+        // Fill timer
+        GUIController.guiController.maximizerTimer.fillAmount = 1f;
 
         // "Delete" the maximizer from the inventory
         PlayerInventory.hasMaximizer = false;
@@ -105,8 +128,12 @@ public class ActionController : MonoBehaviour {
 
         // If decreaseGravity is active, stop the coroutine controlling gravity pickups
         if (decreaseGravActive == true) {
+            GUIController.guiController.decreaseGravTimer.fillAmount = 0f;
             StopCoroutine("GravTimer");
         }
+
+        // Fill panel timer
+        GUIController.guiController.increaseGravTimer.fillAmount = 1f;
 
         Physics.gravity = increaseGrav;
 
@@ -124,9 +151,13 @@ public class ActionController : MonoBehaviour {
         GUIController.guiController.decreaseGravImage.color = newImageColor;
 
         if (increaseGravActive == true) {
+            GUIController.guiController.increaseGravTimer.fillAmount = 0f;
             StopCoroutine("GravTimer");
         }
         Physics.gravity = decreaseGrav;
+
+        // Fill panel timer
+        GUIController.guiController.decreaseGravTimer.fillAmount = 1f;
 
         PlayerInventory.hasDecreaseGrav = false;
         decreaseGravActive = true;
@@ -161,7 +192,9 @@ public class ActionController : MonoBehaviour {
             StopCoroutine("SpeedTimer");
         }
         playerController.speed *= 2;
-        Debug.Log("Time Speed");
+
+        // Fill timer
+        GUIController.guiController.speedTimer.fillAmount = 1f;
 
         PlayerInventory.hasTimeBasedSpeed = false;
         timeBasedSpeedActive = true;
@@ -175,6 +208,7 @@ public class ActionController : MonoBehaviour {
         Color oldImageColor = GUIController.guiController.instantJumpImage.color;
         Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 0.1f);
         GUIController.guiController.instantJumpImage.color = newImageColor;
+
 
         if (playerController.isGrounded == true && 
                 playerController.inWater == false) {
@@ -195,32 +229,44 @@ public class ActionController : MonoBehaviour {
         Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 0.1f);
         GUIController.guiController.timeJumpImage.color = newImageColor;
         
+        // Fill timer
+        GUIController.guiController.jumpTimer.fillAmount = 1f;
+        timeBasedJumpActive = true;
+
         playerController.jumpSpeed = playerController.jumpSpeed * 2;
         PlayerInventory.hasTimeBasedJump = false;
         StartCoroutine("JumpTimer");
         GUIController.guiController.timedJumpButton.interactable = false;
     }
 
-    IEnumerator MaxMinTimer() {
+    IEnumerator MaxMinTimer()
+    {
         // Change the variable pickupDuration in order to change duration
         yield return new WaitForSeconds(pickupDuration);
+
         // Return to normal scale and mass
         transform.localScale = playerController.initScale;
         playerController.rb.mass = playerController.initMass;
+        minimizerActive = false;
+        maximizerActive = false;
     }
 
     IEnumerator GravTimer() {
         yield return new WaitForSeconds(pickupDuration);
         Physics.gravity = playerController.initGrav;
+        increaseGravActive = false;
+        decreaseGravActive = false;
     }
 
     IEnumerator JumpTimer() {
         yield return new WaitForSeconds(pickupDuration);
         playerController.jumpSpeed = playerController.jumpSpeed / 2;
+        timeBasedJumpActive = false;
     }
 
     IEnumerator SpeedTimer() {
         yield return new WaitForSeconds(pickupDuration);
         playerController.speed = 15f;
+        timeBasedSpeedActive = false;
     }
 }
