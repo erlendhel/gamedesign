@@ -29,15 +29,14 @@ public class PauseHandler : MonoBehaviour {
 
     public void Pause()
     {
-
         if (canvas.gameObject.activeInHierarchy == false)
         {
             // If the rolling sound is playing when entering the pause menu
-            if (AudioManager.instance.IsPlaying("Rolling"))
-            {
+            //if (AudioManager.instance.IsPlaying("Rolling"))
+            //{
                 // Pause it
-                AudioManager.instance.Pause("Rolling");
-            }
+              //  AudioManager.instance.Pause("Rolling");
+            //}
 
             // Activate the pause canvas and stop the time of the game
             canvas.gameObject.SetActive(true);

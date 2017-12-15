@@ -31,6 +31,9 @@ TagManager:
   - BlueButton
   - GreenButton
   - RedButton
+  - River
+  - LavaRock
+  - Log
   layers:
   - Default
   - TransparentFX

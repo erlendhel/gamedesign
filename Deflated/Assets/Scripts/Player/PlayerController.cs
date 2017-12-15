@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 
     public bool isGrounded = true;
     public bool inWater = false;
+    public bool canJump = true;
     public Rigidbody rb;
     public Animator teleAnim;
 
@@ -48,7 +49,7 @@ public class PlayerController : MonoBehaviour {
         vel = rb.velocity.magnitude;
         verticalVel = rb.velocity.y;
 
-        if (Input.GetKeyDown("space") && isGrounded) {
+        if (Input.GetKeyDown("space") && isGrounded && canJump) {
             Jump();
         }
         if (Input.GetKeyDown("space") && swinging) {
@@ -71,7 +72,7 @@ public class PlayerController : MonoBehaviour {
         if (inWater == false) {
             rb.AddForce(movement * speed);
         } else {
-            rb.AddForce(movement * (speed / 3));
+            rb.AddForce(movement * (speed / 10));
         }
 
 
@@ -114,9 +115,6 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.CompareTag("Terrain")) {
             isGrounded = true;
         }
-        if (collision.gameObject.CompareTag("Water")) {
-            inWater = true;
-        }
         if (collision.gameObject.CompareTag("BouncyMat")) {
             rb.AddForce(Vector3.up * 1400);
         }
@@ -134,7 +132,16 @@ public class PlayerController : MonoBehaviour {
             if(!isGrounded)
                 isGrounded = true;
         }
+        if (collision.gameObject.CompareTag("Water")) {
+            inWater = true;
+            isGrounded = false;
+        }
+        if (collision.gameObject.CompareTag("River")) {
+            inWater = true;
+            isGrounded = false;
+        }
     }
+
     // Function to detect if the game character is off the ground
     private void OnCollisionExit(Collision collision) {
         if (collision.gameObject.CompareTag("Terrain")) {

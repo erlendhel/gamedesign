@@ -30,7 +30,8 @@ public class TeleportHandler : MonoBehaviour {
         playerController.teleAnim.Play("PlayerTele");
         yield return new WaitForSeconds(5);
         playerController.teleAnim.enabled = false;
-        playerController.rb.transform.position = new Vector3(961.1f, 1037.4f, 639.1f);
+        playerController.rb.velocity = new Vector3(0, 0, 0);
+        playerController.rb.transform.position = new Vector3(926.19f, 1040.98f, 673.2f);
         isEnabled = false;
         particles.Clear();
     }

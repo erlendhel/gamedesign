@@ -18,6 +18,8 @@ public class PlayerHealth : MonoBehaviour {
     private float mediumIncrease = 15.0f;
     private float bigIncrease = 20.0f;
 
+    public bool inLava = false;
+
     // To disable the player from increasing health from airbubbles when respawning text has appeared
     private bool respawning = false;
 
@@ -74,6 +76,13 @@ public class PlayerHealth : MonoBehaviour {
     {
         // Decrease health by small amount every frame update
         currentHealth -= healthDecrease * Time.deltaTime;
+
+        if (playerController.inWater) {
+            StartCoroutine("WaterDamage");
+        }
+        if (inLava) {
+            StartCoroutine("LavaDamage");
+        }
 
         // When player runs out of health
         if (currentHealth <= 0)
@@ -220,6 +229,16 @@ public class PlayerHealth : MonoBehaviour {
             print("Fall damage");
             currentHealth += fallDamage / 1.5f;
         }
+    }
+
+    IEnumerator WaterDamage() {
+        currentHealth -= 0.5f;
+        yield return new WaitForSeconds(1.0f);
+    }
+
+    IEnumerator LavaDamage() {
+        currentHealth -= 2.0f;
+        yield return new WaitForSeconds(1.0f);
     }
 }
 
