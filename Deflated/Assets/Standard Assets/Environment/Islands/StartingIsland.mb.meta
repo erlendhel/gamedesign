@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4a9ce92aa7e10a6459a9432081828997
-timeCreated: 1513239453
+timeCreated: 1513240531
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -8,15 +8,25 @@ ModelImporter:
     100000: pPyramid1
     100002: //RootNode
     100004: Terrain9:Mesh
+    100006: Water
+    100008: Water2
     400000: pPyramid1
     400002: //RootNode
     400004: Terrain9:Mesh
+    400006: Water
+    400008: Water2
     2300000: pPyramid1
     2300002: Terrain9:Mesh
+    2300004: Water
+    2300006: Water2
     3300000: pPyramid1
     3300002: Terrain9:Mesh
+    3300004: Water
+    3300006: Water2
     4300000: Terrain9:Mesh
     4300002: pPyramid1
+    4300004: Water
+    4300006: Water2
     9500000: //RootNode
   materials:
     importMaterials: 1
