@@ -33,6 +33,7 @@ TagManager:
   - RedButton
   - River
   - LavaRock
+  - Log
   layers:
   - Default
   - TransparentFX
