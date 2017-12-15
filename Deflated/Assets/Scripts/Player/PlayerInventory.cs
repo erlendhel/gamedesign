@@ -15,7 +15,7 @@ public class PlayerInventory : MonoBehaviour {
     private static bool hasKey = false;
     
     // Variables indicating which keyparts the player has picked up
-    private static bool hasFirstKeyPart, hasSecondKeyPart, hasThirdKeyPart = false;
+    public static bool hasFirstKeyPart, hasSecondKeyPart, hasThirdKeyPart = false;
 
     private void OnTriggerEnter(Collider pickup) {
         if (pickup.gameObject.CompareTag("Minimizer")) {
