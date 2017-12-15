@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PushingLogs : MonoBehaviour {
 
+    public GameObject gameObject;
+    public Rigidbody rb;
+
 
     //public GameObject gameObject;
     private int numberOfLogs = 3;
@@ -46,6 +49,7 @@ public class PushingLogs : MonoBehaviour {
 
 }
          
+
 
 
 
