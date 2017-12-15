@@ -21,27 +21,67 @@ public class PlayerInventory : MonoBehaviour {
         if (pickup.gameObject.CompareTag("Minimizer")) {
             hasMinimizer = true;
             GUIController.guiController.minimizerButton.interactable = true;
+
+            // Set image color to indicate it is in inventory
+            Color oldImageColor = GUIController.guiController.minimizerImage.color;
+            Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 1f);
+            GUIController.guiController.minimizerImage.color = newImageColor;
         } else if (pickup.gameObject.CompareTag("Maximizer")) {
             hasMaximizer = true;
             GUIController.guiController.maximizerButton.interactable = true;
+
+            // Set image color to indicate it is in inventory
+            Color oldImageColor = GUIController.guiController.maximizerImage.color;
+            Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 1f);
+            GUIController.guiController.maximizerImage.color = newImageColor;
         } else if (pickup.gameObject.CompareTag("IncreaseGrav")) {
             hasIncreaseGrav = true;
             GUIController.guiController.increaseGravButton.interactable = true;
+
+            // Set image color to indicate it is in inventory
+            Color oldImageColor = GUIController.guiController.increaseGravImage.color;
+            Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 1f);
+            GUIController.guiController.increaseGravImage.color = newImageColor;
         } else if (pickup.gameObject.CompareTag("DecreaseGrav")) {
             hasDecreaseGrav = true;
             GUIController.guiController.decreaseGravButton.interactable = true;
+
+            // Set image color to indicate it is in inventory
+            Color oldImageColor = GUIController.guiController.decreaseGravImage.color;
+            Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 1f);
+            GUIController.guiController.decreaseGravImage.color = newImageColor;
         } else if (pickup.gameObject.CompareTag("InstantJump")) {
             hasInstantJump = true;
             GUIController.guiController.instantJumpButton.interactable = true;
+
+            // Set image color to indicate it is in inventory
+            Color oldImageColor = GUIController.guiController.instantJumpImage.color;
+            Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 1f);
+            GUIController.guiController.instantJumpImage.color = newImageColor;
         } else if (pickup.gameObject.CompareTag("TimeBasedJump")) {
             hasTimeBasedJump = true;
             GUIController.guiController.timedJumpButton.interactable = true;
+
+            // Set image color to indicate it is in inventory
+            Color oldImageColor = GUIController.guiController.timeJumpImage.color;
+            Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 1f);
+            GUIController.guiController.timeJumpImage.color = newImageColor;
         } else if (pickup.gameObject.CompareTag("SpeedInstant")) {
             hasInstantSpeed = true;
             GUIController.guiController.instantSpeedButton.interactable = true;
+
+            // Set image color to indicate it is in inventory
+            Color oldImageColor = GUIController.guiController.instantSpeedImage.color;
+            Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 1f);
+            GUIController.guiController.instantSpeedImage.color = newImageColor;
         } else if (pickup.gameObject.CompareTag("SpeedTime")) {
             hasTimeBasedSpeed = true;
             GUIController.guiController.timedSpeedButton.interactable = true;
+
+            // Set image color to indicate it is in inventory
+            Color oldImageColor = GUIController.guiController.timeSpeedImage.color;
+            Color newImageColor = new Color(oldImageColor.r, oldImageColor.g, oldImageColor.b, 1f);
+            GUIController.guiController.timeSpeedImage.color = newImageColor;
         } else if (pickup.gameObject.CompareTag("Key")) {
             hasKey = true;
         } else if (pickup.gameObject.CompareTag("FirstKeyPart")) {
