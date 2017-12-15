@@ -8833,8 +8833,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 89.6, y: -30.5, z: 91}
-  m_Center: {x: 28.9, y: -2.1, z: 0}
+  m_Size: {x: 89.6, y: -10.1, z: 89.1}
+  m_Center: {x: 28.9, y: -6.9, z: 0}
 --- !u!4 &914977494
 Transform:
   m_ObjectHideFlags: 0
@@ -9259,8 +9259,6 @@ GameObject:
   - component: {fileID: 988683979}
   - component: {fileID: 988683978}
   - component: {fileID: 988683981}
-  - component: {fileID: 988683982}
-  - component: {fileID: 988683983}
   m_Layer: 0
   m_Name: stoneBridge
   m_TagString: Untagged
@@ -9348,8 +9346,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 988683976}
   m_Mesh: {fileID: 4300000, guid: 5a18f8c0f5cefbb418c3fa03c5dbd4bf, type: 3}
---- !u!65 &988683981
-BoxCollider:
+--- !u!64 &988683981
+MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -9358,32 +9356,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.56, y: 2.2, z: 3.4071016}
-  m_Center: {x: -0.09530187, y: 1.55, z: 0.00000006382782}
---- !u!65 &988683982
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 988683976}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.26, y: 3.5, z: 2.63}
-  m_Center: {x: 3.12, y: -1.15, z: 0.00000006382782}
---- !u!65 &988683983
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 988683976}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 3.46, z: 3.17}
-  m_Center: {x: -3.76, y: -0.81, z: 0.00000006382782}
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 5a18f8c0f5cefbb418c3fa03c5dbd4bf, type: 3}
 --- !u!1 &989726324 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1480895856968862, guid: 6666b77e635d08e4a89185e5587aa248,
@@ -11463,7 +11439,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1330582127}
-  - component: {fileID: 1330582126}
   m_Layer: 0
   m_Name: unvisible
   m_TagString: Untagged
@@ -11471,18 +11446,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1330582126
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1330582125}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 44.71, y: 1.79, z: 76.9}
-  m_Center: {x: -13.9, y: 0, z: 0}
 --- !u!4 &1330582127
 Transform:
   m_ObjectHideFlags: 0
@@ -19764,6 +19727,86 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114339501787670984, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 73678865}
+    - target: {fileID: 114339501787670984, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateMinimizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 114745896693802670, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 73678865}
+    - target: {fileID: 114745896693802670, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateMaximizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 114449385417699944, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 73678865}
+    - target: {fileID: 114449385417699944, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateDecreaseGrav
+      objectReference: {fileID: 0}
+    - target: {fileID: 114719497169615912, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 73678865}
+    - target: {fileID: 114719497169615912, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateIncreaseGrav
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357785117966088, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 73678865}
+    - target: {fileID: 114357785117966088, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateTimeSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 114739663280697878, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 73678865}
+    - target: {fileID: 114739663280697878, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateInstantSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 114069679483221750, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 73678865}
+    - target: {fileID: 114069679483221750, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateTimeJump
+      objectReference: {fileID: 0}
+    - target: {fileID: 114054037534571146, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 73678865}
+    - target: {fileID: 114054037534571146, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateInstantJump
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6666b77e635d08e4a89185e5587aa248, type: 2}
