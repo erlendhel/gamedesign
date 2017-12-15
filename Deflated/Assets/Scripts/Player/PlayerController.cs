@@ -115,9 +115,6 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.CompareTag("Terrain")) {
             isGrounded = true;
         }
-        if (collision.gameObject.CompareTag("BouncyMat")) {
-            rb.AddForce(Vector3.up * 1400);
-        }
         if (collision.gameObject.CompareTag("Rope")) {
             swinging = false;
         }
