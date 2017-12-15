@@ -7375,7 +7375,7 @@ Prefab:
     - target: {fileID: 114412841635792990, guid: c1419e0125dcfc843bf6a9a817039c0a,
         type: 2}
       propertyPath: sceneIndex
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114412841635792990, guid: c1419e0125dcfc843bf6a9a817039c0a,
         type: 2}
