@@ -990,42 +990,42 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2019529998}
     - target: {fileID: 114069679483221750, guid: 6666b77e635d08e4a89185e5587aa248,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2019529998}
     - target: {fileID: 114739663280697878, guid: 6666b77e635d08e4a89185e5587aa248,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2019529998}
     - target: {fileID: 114357785117966088, guid: 6666b77e635d08e4a89185e5587aa248,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2019529998}
     - target: {fileID: 114719497169615912, guid: 6666b77e635d08e4a89185e5587aa248,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2019529998}
     - target: {fileID: 114449385417699944, guid: 6666b77e635d08e4a89185e5587aa248,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2019529998}
     - target: {fileID: 114745896693802670, guid: 6666b77e635d08e4a89185e5587aa248,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2019529998}
     - target: {fileID: 114339501787670984, guid: 6666b77e635d08e4a89185e5587aa248,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2019529998}
     - target: {fileID: 224766367454175486, guid: 6666b77e635d08e4a89185e5587aa248,
         type: 2}
       propertyPath: m_AnchorMax.x
@@ -1035,6 +1035,46 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114339501787670984, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateMinimizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 114745896693802670, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateMaximizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 114449385417699944, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateDecreaseGrav
+      objectReference: {fileID: 0}
+    - target: {fileID: 114719497169615912, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateIncreaseGrav
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357785117966088, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateTimeSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 114739663280697878, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateInstantSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 114069679483221750, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateTimeJump
+      objectReference: {fileID: 0}
+    - target: {fileID: 114054037534571146, guid: 6666b77e635d08e4a89185e5587aa248,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateInstantJump
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6666b77e635d08e4a89185e5587aa248, type: 2}
@@ -1097,6 +1137,10 @@ Prefab:
     - target: {fileID: 100000, guid: eb04732aff81a7d49a2af650391b777c, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eb04732aff81a7d49a2af650391b777c, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb04732aff81a7d49a2af650391b777c, type: 3}
