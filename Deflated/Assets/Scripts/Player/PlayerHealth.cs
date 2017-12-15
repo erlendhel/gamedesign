@@ -224,6 +224,7 @@ public class PlayerHealth : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         float fallDamage = playerController.verticalVel;
+        Debug.Log("Fall damage: " + fallDamage);
         if (collision.gameObject.CompareTag("Terrain") && fallDamage <= -30.0f)
         {
             print("Fall damage");
