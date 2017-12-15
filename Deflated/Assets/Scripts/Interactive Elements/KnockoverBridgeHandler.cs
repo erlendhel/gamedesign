@@ -19,7 +19,7 @@ public class KnockoverBridgeHandler : MonoBehaviour {
 	
     private void OnCollisionEnter(Collision player) {
         collisionForce = (playerController.rb.mass * (Mathf.Pow(playerController.vel, 2))) / 2;
-        if (player.gameObject.CompareTag("Player") && !isActive && collisionForce >= 3500.0f) {
+        if (player.gameObject.CompareTag("Player") && !isActive && collisionForce >= 2250.0f) {
             anim.enabled = true;
         }
     }

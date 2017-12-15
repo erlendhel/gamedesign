@@ -19,14 +19,6 @@ public class LavaHandler : MonoBehaviour {
         }
     }
 
-    private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("LavaRock")) {
-            print("Success");
-            upstreamParticles.Play();
-            upstreamHandler.yForce = 2750.0f;
-        }
-    }
-
     private void OnCollisionExit(Collision collision) {
         if (collision.gameObject.CompareTag("Player")) {
             playerHealth = collision.gameObject.GetComponent<PlayerHealth>();

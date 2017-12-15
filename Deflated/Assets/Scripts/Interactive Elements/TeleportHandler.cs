@@ -31,7 +31,7 @@ public class TeleportHandler : MonoBehaviour {
         yield return new WaitForSeconds(5);
         playerController.teleAnim.enabled = false;
         playerController.rb.velocity = new Vector3(0, 0, 0);
-        playerController.rb.transform.position = new Vector3(926.19f, 1040.98f, 673.2f);
+        playerController.rb.transform.position = new Vector3(170.4794f, 577.6711f, -211.5278f);
         isEnabled = false;
         particles.Clear();
     }

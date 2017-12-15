@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     public bool canJump = true;
     public Rigidbody rb;
     public Animator teleAnim;
+    public Vector3 currentPos;
 
     public float speed = 15f;
     public float jumpSpeed = 500.0f;
@@ -48,7 +49,7 @@ public class PlayerController : MonoBehaviour {
 
         vel = rb.velocity.magnitude;
         verticalVel = rb.velocity.y;
-
+        currentPos = rb.position;
         if (Input.GetKeyDown("space") && isGrounded && canJump) {
             Jump();
         }
