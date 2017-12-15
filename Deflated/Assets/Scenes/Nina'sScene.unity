@@ -17124,7 +17124,7 @@ MonoBehaviour:
   player: {fileID: 73678864}
   playerController: {fileID: 73678866}
   particles: {fileID: 1451144851}
-  sceneIndex: 3
+  sceneIndex: 4
 --- !u!4 &1678726015 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4170453840662314, guid: 32254c400e6978e40995490f27c87108,

@@ -15,7 +15,7 @@ public class SceneLoader : MonoBehaviour {
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame()
@@ -35,19 +35,19 @@ public class SceneLoader : MonoBehaviour {
 
     public void LevelSelection()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(8);
     }
 
     public void Settings()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(10);
     }
 
     public void Shop()
     {
         //Store the scene the player entered the shop from
         PlayerPrefs.SetString("lastLoadedScene", SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(9);
     }
 
     public void PreviousScene()
