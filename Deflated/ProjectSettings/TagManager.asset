@@ -32,6 +32,7 @@ TagManager:
   - GreenButton
   - RedButton
   - River
+  - LavaRock
   layers:
   - Default
   - TransparentFX
